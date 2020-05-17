@@ -1,22 +1,29 @@
 import React from 'react';
 import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
-
 import './style.css';
 
 function TopNav(props) {
 	return (
-		<div id="top-nav">
+		<div>
 			<div className="row">
 				<div className="col-md-12">
-					<Navbar  fixed="top" bg="dark" variant="dark" expand="lg" sticky="top">
-						<Navbar.Brand href="/">
-							Six Feet of Separation
-						</Navbar.Brand>
+					<Navbar fixed="top" bg="" variant="dark" expand="lg" sticky="top" className="top-nav">
+						<Navbar.Brand href="/">Six Feet of Separation</Navbar.Brand>
 						<Navbar.Toggle aria-controls="basic-navbar-nav" />
 						<Navbar.Collapse id="basic-navbar-nav">
 							<Nav className="mr-auto">
-								<Nav.Link href="/">Sign Up</Nav.Link>
-								<Nav.Link href="#">About</Nav.Link>
+								<Button className="top-nav-buttons" variant="outline-info" href="/">
+									Sign In
+								</Button>
+								<Button className="top-nav-buttons" variant="outline-info" href="/">
+								Register
+								</Button>
+								<Button className="top-nav-buttons" variant="outline-info" href="/">
+									Sign In
+								</Button>
+								{/* <Nav.Link href="/">Sign In</Nav.Link>
+								<Nav.Link href="/">Register</Nav.Link>
+								<Nav.Link href="#">About</Nav.Link> */}
 								<NavDropdown title="Categories" id="basic-nav-dropdown">
 									<NavDropdown.Item href="#action/3.1">Recipes</NavDropdown.Item>
 									<NavDropdown.Item href="#action/3.2">Rentals</NavDropdown.Item>
