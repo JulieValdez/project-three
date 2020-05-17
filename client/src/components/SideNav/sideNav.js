@@ -19,10 +19,10 @@ function SideNav(props) {
 
             <ul className="list-unstyled components">
               <li>
-                <a href="#">Home</a>
+                <a href="userhome">Home</a>
               </li>
               <li>
-                <a href="#">Profile</a>
+                <a href="profile">Profile</a>
               </li>
               <li>
                 <a href="#">Logout</a>
