@@ -1,16 +1,22 @@
-import React, { Component } from "react";
-import Wrapper from "./components/Wrapper/wrapper";
-import SideNav from "./components/SideNav/sideNav";
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import signInHome from "./pages/signInHome";
+import userHome from "./pages/userHome";
+import userProfile from "./pages/userProfile";
+import userRegister from "./pages/userRegister";
+import "./App.css";
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <Wrapper />
-        <SideNav />
-      </div>
-    );
-  }
+function App() {
+  return (
+    <Router>
+      <Switch>
+        <Route exact path="/" component={signInHome} />
+        <Route exact path="/userhome" component={userHome} />
+        <Route exact path="/profile" component={userProfile} />
+        <Route exact path="/register" component={userRegister} />
+      </Switch>
+    </Router>
+  );
 }
 
 export default App;
