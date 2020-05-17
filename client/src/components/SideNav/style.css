@@ -1,3 +1,13 @@
+.hamburger {
+  display: none;
+}
+
+img {
+  height: 50px;
+  width: 50px;
+  margin: 12px;
+}
+
 .wrapper {
   display: flex;
   width: 100%;
@@ -24,14 +34,14 @@ a[data-toggle="collapse"] {
   transform: translateY(-50%);
 }
 
-/* @media (max-width: 768px) {
-  #sidebar {
-    margin-left: -250px;
+@media (max-width: 768px) {
+  .desktop-sidenav {
+    display: none;
   }
-  #sidebar.active {
-    margin-left: 0;
+  .hamburger {
+    display: inline;
   }
-} */
+}
 
 /*
     ADDITIONAL DEMO STYLE, NOT IMPORTANT TO MAKE THINGS WORK BUT TO MAKE IT A BIT NICER :)
