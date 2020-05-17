@@ -1,0 +1,9 @@
+.wrapper {
+	background: rgb(189, 184, 251);
+	background: linear-gradient(
+		36deg,
+		rgba(189, 184, 251, 1) 0%,
+		rgba(135, 206, 236, 1) 35%,
+		rgba(214, 225, 243, 1) 100%
+	);
+}

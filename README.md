@@ -1,29 +1,47 @@
-# Create React Express App
+# 6 FEET OF SEPARATION
 
-## About This Boilerplate
 
-This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
+### What Is *6 Feet of Separation*
+  1. It is a blog-style social media app for neighbors in a community where users can share posts that can be useful. blah blah blah....
 
-The front-end React app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
+     * Post blog articles! Let your neighbors in your community know what you are up to.
 
-## Starting the app locally
+     * Give props - this will increase user score and article score
 
-Start by installing front and backend dependencies. While in this directory, run the following command:
+     * Post services - share what services you want to provide to help those nearby whether you want to get paid or not.
 
-```
-npm install
-```
+     * Comment and connect with those nearby that you cannot get in close physical contact with due to pandemics.
 
-This should install node modules within the server and the client folder.
+  2. Users are able to leave comments on the articles displayed and revisit them later. The comments are saved to the database as well and associated with their articles. Users are also able to delete comments left on articles. All stored comments should be visible to every user.
 
-After both installations complete, run the following command in your terminal:
+---
+ ## Technology
+ 
+ * `react`
+ * `react-bootstrap`
+ * `github`
+ * `firebase DB`
+ * `Mongo DB`
+ * `Heroku`
+ * `Node.js`
 
-```
-npm start
-```
+---
 
-Your app should now be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
+ ## NPM Packages
+ 
+ * `express`
+ * `react-firebaseui`
+ * `mongoose`
+ * `axios`
+ * `react-router-dom`
 
-## Deployment (Heroku)
+---
+  ## Database
+  
+  * `/`
 
-To deploy, simply add and commit your changes, and push to Heroku. As is, the NPM scripts should take care of the rest.
+---
+
+ ## Deployment
+ https://project-three-jjem.herokuapp.com/
+ 
