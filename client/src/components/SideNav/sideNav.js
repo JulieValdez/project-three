@@ -1,6 +1,7 @@
 import React from "react";
 import "./style.css";
 import hamburger from "../assets/hamburger.png";
+import ProfileCard from "../ProfileCard/profileCard";
 
 function SideNav(props) {
   return (
@@ -14,7 +15,7 @@ function SideNav(props) {
         <div className="wrapper">
           <nav id="sidebar">
             <div className="sidebar-header">
-              <h3>Area where profile card and logo go</h3>
+              <ProfileCard />
             </div>
 
             <ul className="list-unstyled components">
