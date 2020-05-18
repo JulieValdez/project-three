@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 .post-card {
+=======
+.post {
+<<<<<<< HEAD
+>>>>>>> master
 	background-size: cover;
 	background-position-x: 50%;
 	background-position-y: center;
@@ -32,5 +37,31 @@
 	padding-bottom: 50px;
 	width: 60%;
 	margin: 0 auto;
+<<<<<<< HEAD
 	/* display: inline-block; */
+=======
+=======
+  background-size: cover;
+  /* background-position-x: 50%;
+	background-position-y: center; */
+  height: 500px;
+  width: 300px;
+  margin: 8px 25px 8px 25px;
+  border-radius: 3px;
+  border-color: rgb(204, 150, 0);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  background: red;
+}
+
+.container {
+  display: flex;
+  min-height: 80%;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  width: 60%;
+  margin: 0 auto;
+>>>>>>> emily5
+>>>>>>> master
 }

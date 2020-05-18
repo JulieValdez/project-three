@@ -1,5 +1,5 @@
-import React from 'react';
-import './style.css';
+import React from "react";
+import "./style.css";
 
 function PostCard(props) {
 	return (
@@ -44,6 +44,7 @@ function PostCard(props) {
 					</div>
 				</div>
 
+<<<<<<< HEAD
 				<div
 					// key={blogPost.id}
 					// id={blogPost.id}
@@ -167,6 +168,19 @@ function PostCard(props) {
 			</div>
 		</div>
 	);
+=======
+      <div
+        // key={blogPost.id}
+        // id={blogPost.id}
+        className="post"
+        role="view post"
+        aria-label="click item"
+        style={{}}
+      />
+      {/* <img src={blogPost.image} /> */}
+    </div>
+  );
+>>>>>>> master
 }
 
 export default PostCard;

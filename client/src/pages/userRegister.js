@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 import Wrapper from '../components/Wrapper/wrapper';
 import TopNav from '../components/TopNav/topNav';
@@ -14,6 +15,6 @@ class userRegister extends Component {
 			</div>
 		);
 	}
-}
+
 
 export default userRegister;
