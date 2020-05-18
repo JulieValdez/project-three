@@ -1,0 +1,23 @@
+.profileCard {
+  background: #7386d5
+  
+}
+
+#logo {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+}
+
+#profilePic {
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
