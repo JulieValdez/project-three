@@ -1,0 +1,48 @@
+.sign-in {    
+    background: #9cbcf5; 
+    height: 100%;
+    min-height:100vh
+}
+
+.sign-in-graphic {
+    display: block;
+    padding-top: 70px;
+    padding-bottom: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 70%;
+	height: auto;
+}
+
+.sign-in-form {
+    width: 70%;
+    justify-content: center;
+    margin: 0 auto;
+   
+}
+
+.sign-in-button{
+    background-color: Transparent;
+    border-radius: 30px;
+    border: 2px solid #045fc5;
+    color: #045fc5;
+    width: 340px
+
+}
+
+.button {
+    transition-duration: 0.4s;
+  }
+  
+  .button:hover {
+    background-color: #045fc5; 
+    color: white;
+  }
+
+  .register-button{
+    background-color: #045fc5;
+    border-radius: 30px;
+    border: 2px solid #045fc5;
+    color: #white;
+    width: 340px
+  }

@@ -1,3 +1,4 @@
+
 .App {
 	background: rgb(189, 184, 251);
 	background: linear-gradient(
@@ -6,4 +7,5 @@
 		rgba(135, 206, 236, 1) 35%,
 		rgba(214, 225, 243, 1) 100%
 	);
+	min-height:100vh
 }
