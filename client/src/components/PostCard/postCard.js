@@ -1,10 +1,10 @@
-import React from 'react';
-import './style.css';
+import React from "react";
+import "./style.css";
 
 function PostCard(props) {
-	return (
-		<div>
-			{/* pulling articles pseudocode
+  return (
+    <div>
+      {/* pulling articles pseudocode
 			<div className="container">
 				{this.state.posts.map((blogPost) => (
 					<div
@@ -20,17 +20,17 @@ function PostCard(props) {
 				))}
 			</div> */}
 
-			<div
-				// key={blogPost.id}
-				// id={blogPost.id}
-				className="post"
-				role="view post"
-				aria-label="click item"
-				style={{}}
-			/>
-			{/* <img src={blogPost.image} /> */}
-		</div>
-	);
+      <div
+        // key={blogPost.id}
+        // id={blogPost.id}
+        className="post"
+        role="view post"
+        aria-label="click item"
+        style={{}}
+      />
+      {/* <img src={blogPost.image} /> */}
+    </div>
+  );
 }
 
 export default PostCard;
