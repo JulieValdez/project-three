@@ -15,6 +15,6 @@ class userRegister extends Component {
 			</div>
 		);
 	}
-
+}
 
 export default userRegister;

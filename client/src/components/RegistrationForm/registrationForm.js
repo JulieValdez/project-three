@@ -39,14 +39,14 @@ function RegisterationForm(props) {
 							<Form.Control type="password" placeholder="Password" />
 						</Form.Group>
 
-						<Button className="register-button" variant="info" type="submit" href="#">
+						<Button id="register-button" variant="info" type="submit" href="#">
 							Register
 						</Button>
 
 						<br />
 						<span id="no-account">Already have an account?</span>
 						<br />
-						<Button className="sign-in-button" variant="outline-info" type="submit" href="/">
+						<Button id="sign-in-button" variant="outline-info" type="submit" href="/">
 							Sign In
 						</Button>
 					</Form>

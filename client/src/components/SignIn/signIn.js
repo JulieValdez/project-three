@@ -19,14 +19,14 @@ function SignIn(props) {
 						<Form.Label>Password</Form.Label>
 						<Form.Control type="password" placeholder="Password" />
 					</Form.Group>
-					<Button className="sign-in-button" variant="outline-info" type="submit">
+					<Button id="sign-in-button" variant="outline-info" type="submit">
 						Sign In
 					</Button>
                 
                     <br></br>
                     <span id="no-account">Don't have an account?</span>
                     <br></br>
-                    <Button className="register-button" variant="info" type="submit" href="/register">
+                    <Button id="register-button" variant="info" type="submit" href="/register">
 						Register
 					</Button>
 				</Form>
