@@ -4,6 +4,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	padding-bottom: 90px;
 }
 
 .register-graphic {
@@ -22,27 +23,27 @@
 	margin: 0 auto;
 }
 
-.sign-in-button {
-	background-color: Transparent;
-	border-radius: 30px;
-	border: 2px solid #045fc5;
-	color: #045fc5;
-	width: 340px;
+#sign-in-button{
+    background-color: Transparent;
+    border-radius: 30px;
+    border: 2px solid ;
+	width: 100%;
+	color:#045fc5;
 }
 
 .button {
-	transition-duration: 0.4s;
-}
+    transition-duration: 0.4s;
+  }
+  
+  /* .button:hover {
+    background-color: #045fc5; 
+    color: white;
+  } */
 
-.button:hover {
-	background-color: #045fc5;
-	color: white;
-}
-
-.register-button {
-	background-color: #045fc5;
-	border-radius: 30px;
-	border: 2px solid #045fc5;
-	color: #white;
-	width: 340px;
-}
+  #register-button{
+    background-color: #045fc5;
+    border-radius: 30px;
+    border: 2px solid #045fc5;
+    color: white;
+    width: 100%;
+  }

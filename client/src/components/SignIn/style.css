@@ -21,28 +21,26 @@
    
 }
 
-.sign-in-button{
+#sign-in-button{
     background-color: Transparent;
     border-radius: 30px;
     border: 2px solid #045fc5;
-    color: #045fc5;
-    width: 340px
-
+    width: 100%;
 }
 
 .button {
     transition-duration: 0.4s;
   }
   
-  .button:hover {
+  /* .button:hover {
     background-color: #045fc5; 
     color: white;
-  }
+  } */
 
-  .register-button{
+  #register-button{
     background-color: #045fc5;
     border-radius: 30px;
     border: 2px solid #045fc5;
-    color: #white;
-    width: 340px
+    color: white;
+    width: 100%;
   }
