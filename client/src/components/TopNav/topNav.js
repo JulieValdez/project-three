@@ -15,11 +15,11 @@ function TopNav(props) {
 								<Button className="top-nav-buttons" variant="outline-info" href="/">
 									Sign In
 								</Button>
-								<Button className="top-nav-buttons" variant="outline-info" href="/">
+								<Button className="top-nav-buttons" variant="outline-info" href="/register">
 								Register
 								</Button>
-								<Button className="top-nav-buttons" variant="outline-info" href="/">
-									Sign In
+								<Button className="top-nav-buttons" variant="outline-info" href="#">
+									About
 								</Button>
 								{/* <Nav.Link href="/">Sign In</Nav.Link>
 								<Nav.Link href="/">Register</Nav.Link>
