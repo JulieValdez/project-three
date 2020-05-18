@@ -10,44 +10,27 @@ import {
 import "./style.css";
 
 function TopNav(props) {
-  return (
-    <div>
-      <div className="row">
-        <div className="col-md-12">
-          <Navbar
-            fixed="top"
-            bg=""
-            variant="dark"
-            expand="lg"
-            sticky="top"
-            className="top-nav"
-          >
-            <Navbar.Brand href="/">Six Feet of Separation</Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="mr-auto">
-                <Button
-                  className="top-nav-buttons"
-                  variant="outline-info"
-                  href="/"
-                >
-                  Sign In
-                </Button>
-                <Button
-                  className="top-nav-buttons"
-                  variant="outline-info"
-                  href="/"
-                >
-                  Register
-                </Button>
-                <Button
-                  className="top-nav-buttons"
-                  variant="outline-info"
-                  href="/"
-                >
-                  Sign In
-                </Button>
-                {/* <Nav.Link href="/">Sign In</Nav.Link>
+
+	return (
+		<div>
+			<div className="row">
+				<div className="col-md-12">
+					<Navbar fixed="top" bg="" variant="dark" expand="lg" sticky="top" className="top-nav">
+						<Navbar.Brand href="/">Six Feet of Separation</Navbar.Brand>
+						<Navbar.Toggle aria-controls="basic-navbar-nav" />
+						<Navbar.Collapse id="basic-navbar-nav">
+							<Nav className="mr-auto">
+								<Button className="top-nav-buttons" variant="outline-info" href="/">
+									Sign In
+								</Button>
+								<Button className="top-nav-buttons" variant="outline-info" href="/register">
+								Register
+								</Button>
+								<Button className="top-nav-buttons" variant="outline-info" href="#">
+									About
+								</Button>
+								{/* <Nav.Link href="/">Sign In</Nav.Link>
+
 								<Nav.Link href="/">Register</Nav.Link>
 								<Nav.Link href="#">About</Nav.Link> */}
                 <NavDropdown title="Categories" id="basic-nav-dropdown">

@@ -26,7 +26,7 @@ function SignIn(props) {
                     <br></br>
                     <span id="no-account">Don't have an account?</span>
                     <br></br>
-                    <Button className="register-button" variant="info" type="submit">
+                    <Button className="register-button" variant="info" type="submit" href="/register">
 						Register
 					</Button>
 				</Form>
