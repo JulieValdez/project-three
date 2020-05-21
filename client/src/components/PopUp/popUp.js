@@ -1,6 +1,7 @@
 import React from "react";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
 
 function PopUp(props) {
   return (
@@ -10,18 +11,29 @@ function PopUp(props) {
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >
-      <Modal.Header closeButton>
-        <Modal.Title id="contained-modal-title-vcenter">
-          Modal heading
-        </Modal.Title>
-      </Modal.Header>
+      <Modal.Header closeButton></Modal.Header>
       <Modal.Body>
-        <h4>Centered Modal</h4>
-        <p>
-          Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-          dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-          consectetur ac, vestibulum at eros.
-        </p>
+        <Form>
+          <Form.Group controlId="formTitle">
+            <Form.Control type="text" placeholder="Post Title" />
+          </Form.Group>
+          <br />
+          <Form.Group controlId="categorySelect">
+            <Form.Label>Choose a Category</Form.Label>
+            <Form.Control as="select">
+              <option>Fitness</option>
+              <option>Groceries</option>
+              <option>Recipes</option>
+              <option>Mental Health</option>
+              <option>Resources</option>
+              <option>Misc.</option>
+            </Form.Control>
+          </Form.Group>
+
+          <Form.Group controlId="textBlock">
+            <Form.Control as="textarea" rows="3" />
+          </Form.Group>
+        </Form>
       </Modal.Body>
       <Modal.Footer>
         <Button onClick={props.onHide}>Close</Button>
