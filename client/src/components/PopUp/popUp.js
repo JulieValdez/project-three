@@ -11,7 +11,9 @@ function PopUp(props) {
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >
-      <Modal.Header closeButton></Modal.Header>
+      <Modal.Header closeButton>
+        <h4>Make a Post!</h4>
+      </Modal.Header>
       <Modal.Body>
         <Form>
           <Form.Group controlId="formTitle">
@@ -36,7 +38,7 @@ function PopUp(props) {
         </Form>
       </Modal.Body>
       <Modal.Footer>
-        <Button onClick={props.onHide}>Close</Button>
+        <Button type="submit">Submit</Button>
       </Modal.Footer>
     </Modal>
   );
