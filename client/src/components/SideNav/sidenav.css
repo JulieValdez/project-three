@@ -38,9 +38,6 @@ a[data-toggle="collapse"] {
   .wrapper {
     display: none;
   }
-  .hamburger {
-    display: inline;
-  }
 }
 
 /*
