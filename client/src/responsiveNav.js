@@ -28,9 +28,7 @@ class ResponsiveNav extends Component {
         <Toolbar drawerClickHandler={this.drawerToggleClickHandler} />
         <SideDrawer show={this.state.sideDrawerOpen} />
         {backDrop}
-        <main style={{ marginTop: "64px" }}>
-          <p>This is the page content</p>
-        </main>
+        <main></main>
       </div>
     );
   }

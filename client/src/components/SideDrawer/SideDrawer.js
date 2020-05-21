@@ -1,5 +1,6 @@
 import React from "react";
 import "./SideDrawer.css";
+import SideNav from "../SideNav/sideNav.js";
 
 const sideDrawer = (props) => {
   let drawerClasses = "side-drawer";
@@ -8,14 +9,9 @@ const sideDrawer = (props) => {
   }
   return (
     <nav className={drawerClasses}>
-      <ul>
-        <li>
-          <a href="/">Products</a>
-        </li>
-        <li>
-          <a href="/">Users</a>
-        </li>
-      </ul>
+      <div className="sideNavDrawerWrapper">
+        <SideNav style={{ display: "block" }} />
+      </div>
     </nav>
   );
 };

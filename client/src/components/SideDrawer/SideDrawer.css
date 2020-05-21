@@ -12,31 +12,11 @@
   transition: transform 0.3s ease-out;
 }
 
+.sideNavDrawerWrapper {
+  box-sizing: border-box;
+}
 .side-drawer.open {
   transform: translateX(0);
-}
-
-.side-drawer ul {
-  height: 100%;
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.side-drawer a {
-  color: purple;
-  text-decoration: none;
-  font-size: 1.2rem;
-}
-
-.side-drawer a:hover,
-.side-drawer a:active {
-  color: orange;
-}
-
-.side-drawer li {
-  margin: 0.5rem 0;
 }
 
 @media (min-width: 769px) {
