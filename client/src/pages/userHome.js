@@ -10,7 +10,9 @@ class userHome extends Component {
       <div className="App">
         <Wrapper />
         <ResponsiveNav />
-        <SideNav />
+        <div className="desktopSideNavContainer">
+          <SideNav />
+        </div>
         <PopUpToggle />
       </div>
     );
