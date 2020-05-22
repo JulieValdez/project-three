@@ -1,5 +1,6 @@
 import React from "react";
 import "./sidenav.css";
+import ProfileCard from "../ProfileCard/profileCard";
 
 export function SideNav(props) {
   return (
@@ -7,7 +8,7 @@ export function SideNav(props) {
       <div className="wrapper">
         <nav id="sidebar">
           <div className="sidebar-header">
-            <h3>Area where profile card and logo go</h3>
+            <ProfileCard />
           </div>
 
           <ul className="list-unstyled components">

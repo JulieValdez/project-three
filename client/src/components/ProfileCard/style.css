@@ -1,8 +1,12 @@
 .profileCard {
-  background: #7386d5
-  
+  background: #4054F5;
+  color: black;
+  min-width: 250px;
+  max-width: 250px;
 }
-
+.card {
+  background-color: none !important;
+}
 #logo {
   border-radius: 50%;
   height: 100px;
