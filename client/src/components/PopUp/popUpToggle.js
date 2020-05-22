@@ -7,7 +7,11 @@ function PopUpToggle() {
 
   return (
     <>
-      <Button variant="primary" onClick={() => setModalShow(true)}>
+      <Button
+        variant="primary"
+        onClick={() => setModalShow(true)}
+        style={{ marginLeft: "500px" }}
+      >
         Create a Post
       </Button>
 

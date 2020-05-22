@@ -5,7 +5,7 @@ import ProfileCard from "../ProfileCard/profileCard";
 export function SideNav(props) {
   return (
     <div>
-      <div className="wrapper">
+      <div className="sidebarWrapper" style={{ pointerEvents: "none" }}>
         <nav id="sidebar">
           <div className="sidebar-header">
             <ProfileCard />

@@ -1,10 +1,4 @@
-.logo {
-  height: 50px;
-  width: 50px;
-  margin: 12px;
-}
-
-.wrapper {
+.sidebarWrapper {
   position: fixed;
   display: flex;
   width: 100%;

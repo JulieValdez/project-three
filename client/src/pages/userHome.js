@@ -13,7 +13,6 @@ class userHome extends Component {
         <div className="desktopSideNavContainer">
           <SideNav />
         </div>
-        <PopUpToggle />
       </div>
     );
   }
