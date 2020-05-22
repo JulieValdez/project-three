@@ -7,7 +7,10 @@ import ProfilePic from "../assets/profilepic.jpeg";
 function ProfileCard(props) {
   return (
     <div>
-      <Card className="profileCard" style={{ width: "18rem" }}>
+      <div
+        className="profileCard"
+        style={{ width: "18rem", backgroundColor: "none" }}
+      >
         <Card.Img className="center" id="logo" variant="top" src={Logo} />
         <Card.Img
           className="center"
@@ -23,7 +26,7 @@ function ProfileCard(props) {
             bulk of the card's content.
           </Card.Text>
         </Card.Body>
-      </Card>
+      </div>
     </div>
   );
 }
