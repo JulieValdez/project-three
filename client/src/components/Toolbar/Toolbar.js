@@ -7,9 +7,11 @@ import PopUpToggle from "../PopUp/popUpToggle";
 
 const toolbar = ({
   drawerClickHandler,
-  postTitle,
+  posttitle,
   handleInputChange,
-  postBody,
+  postbody,
+  selectcategory,
+  handleSelectCatChange,
 }) => (
   <header className="toolbar">
     <nav className="toolbar_navigation">
@@ -21,9 +23,10 @@ const toolbar = ({
       </div>
       <div className="spacer"></div>
       <PopUpToggle
-        postTitle={postTitle}
+        posttitle={posttitle}
         handleInputChange={handleInputChange}
-        postBody={postBody}
+        postbody={postbody}
+        selectcategory={handleSelectCatChange}
       />
       <div className="toolbar_nav-items">
         <ul>
