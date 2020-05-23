@@ -12,7 +12,6 @@ const toolbar = ({
   handleInputChange,
   postbody,
   selectcategory,
-  handleSelectCatChange,
 }) => (
   <header className="toolbar">
     <nav className="toolbar_navigation">
@@ -27,7 +26,7 @@ const toolbar = ({
         posttitle={posttitle}
         handleInputChange={handleInputChange}
         postbody={postbody}
-        selectcategory={handleSelectCatChange}
+        selectcategory={selectcategory}
       />
       <div className="toolbar_nav-items">
         <ul>

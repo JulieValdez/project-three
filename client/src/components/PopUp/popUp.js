@@ -6,13 +6,7 @@ import PropTypes from "prop-types";
 
 function PopUp(
   props,
-  {
-    posttitle,
-    handleInputChange,
-    postbody,
-    selectcategory,
-    handleSelectCatChange,
-  }
+  { posttitle, handleInputChange, postbody, selectcategory }
 ) {
   return (
     <Modal
@@ -40,7 +34,7 @@ function PopUp(
             <Form.Label>Choose a Category</Form.Label>
             <Form.Control
               as="select"
-              onChange={handleSelectCatChange}
+              onChange={selectcategory}
               value={selectcategory}
             >
               <option defaultValue="Fitness">Fitness</option>
