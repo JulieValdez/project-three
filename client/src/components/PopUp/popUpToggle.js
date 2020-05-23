@@ -2,7 +2,7 @@ import React from "react";
 import Button from "react-bootstrap/Button";
 import PopUp from "./popUp";
 
-function PopUpToggle() {
+function PopUpToggle({ postTitle, handleInputChange, postBody }) {
   const [modalShow, setModalShow] = React.useState(false);
 
   return (
@@ -15,7 +15,13 @@ function PopUpToggle() {
         Create a Post
       </Button>
 
-      <PopUp show={modalShow} onHide={() => setModalShow(false)} />
+      <PopUp
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+        postTitle={postTitle}
+        handleInputChange={handleInputChange}
+        postBody={postBody}
+      />
     </>
   );
 }
