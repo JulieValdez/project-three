@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import Wrapper from "../components/Wrapper/wrapper";
 import ResponsiveNav from "../responsiveNav";
+import SideNav from "../components/SideNav/sideNav";
+import ProfilePageCard from "../components/ProfilePageCard/profilePageCard";
 
 class userProfile extends Component {
   render() {
@@ -8,6 +10,10 @@ class userProfile extends Component {
       <div className="App">
         <Wrapper />
         <ResponsiveNav />
+        <div className="desktopSideNavContainer">
+          <SideNav />
+        </div>
+        <ProfilePageCard />
       </div>
     );
   }
