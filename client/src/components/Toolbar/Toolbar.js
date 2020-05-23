@@ -5,17 +5,26 @@ import DrawerToggleButton from "../SideDrawer/DrawerToggleButton";
 import { Dropdown } from "react-bootstrap";
 import PopUpToggle from "../PopUp/popUpToggle";
 
-const toolbar = (props) => (
+const toolbar = ({
+  drawerClickHandler,
+  postTitle,
+  handleInputChange,
+  postBody,
+}) => (
   <header className="toolbar">
     <nav className="toolbar_navigation">
       <div className="toolbar_toggle-button">
-        <DrawerToggleButton click={props.drawerClickHandler} />
+        <DrawerToggleButton click={drawerClickHandler} />
       </div>
       <div className="toolbar_logo">
         <a href="/"></a>
       </div>
       <div className="spacer"></div>
-      <PopUpToggle />
+      <PopUpToggle
+        postTitle={postTitle}
+        handleInputChange={handleInputChange}
+        postBody={postBody}
+      />
       <div className="toolbar_nav-items">
         <ul>
           {/* can use router but here using normal anchor tags below */}

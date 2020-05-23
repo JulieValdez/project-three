@@ -3,7 +3,7 @@ import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
-function PopUp(props) {
+function PopUp(props, { postTitle, handleInputChange, postBody }) {
   return (
     <Modal
       {...props}
@@ -17,7 +17,13 @@ function PopUp(props) {
       <Modal.Body>
         <Form>
           <Form.Group controlId="formTitle">
-            <Form.Control type="text" placeholder="Post Title" />
+            <Form.Control
+              type="text"
+              placeholder="Post Title"
+              onChange={handleInputChange}
+            >
+              {postTitle}
+            </Form.Control>
           </Form.Group>
           <br />
           <Form.Group controlId="categorySelect">
@@ -33,7 +39,9 @@ function PopUp(props) {
           </Form.Group>
 
           <Form.Group controlId="textBlock">
-            <Form.Control as="textarea" rows="3" />
+            <Form.Control as="textarea" rows="3" onChange={handleInputChange}>
+              {postBody}
+            </Form.Control>
           </Form.Group>
         </Form>
       </Modal.Body>
