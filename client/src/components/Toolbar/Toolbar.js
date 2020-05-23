@@ -4,12 +4,14 @@ import "./Toolbar.css";
 import DrawerToggleButton from "../SideDrawer/DrawerToggleButton";
 import { Dropdown } from "react-bootstrap";
 import PopUpToggle from "../PopUp/popUpToggle";
+import PropTypes from "prop-types";
 
 const toolbar = ({
   drawerClickHandler,
-  postTitle,
+  posttitle,
   handleInputChange,
-  postBody,
+  postbody,
+  selectcategory,
 }) => (
   <header className="toolbar">
     <nav className="toolbar_navigation">
@@ -21,9 +23,10 @@ const toolbar = ({
       </div>
       <div className="spacer"></div>
       <PopUpToggle
-        postTitle={postTitle}
+        posttitle={posttitle}
         handleInputChange={handleInputChange}
-        postBody={postBody}
+        postbody={postbody}
+        selectcategory={selectcategory}
       />
       <div className="toolbar_nav-items">
         <ul>
@@ -58,5 +61,16 @@ const toolbar = ({
     </nav>
   </header>
 );
+
+toolbar.propTypes = {
+  drawerClickHandler: PropTypes.func.isRequired,
+  posttitle: PropTypes.string.isRequired,
+  handleInputChange: PropTypes.func.isRequired,
+  postbody: PropTypes.string.isRequired,
+  selectcategory: PropTypes.string.isRequired,
+  handleSelectCatChange: PropTypes.func.isRequired,
+};
+
+PropTypes.checkPropTypes();
 
 export default toolbar;

@@ -2,8 +2,12 @@ import React from "react";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import PropTypes from "prop-types";
 
-function PopUp(props, { postTitle, handleInputChange, postBody }) {
+function PopUp(
+  props,
+  { posttitle, handleInputChange, postbody, selectcategory }
+) {
   return (
     <Modal
       {...props}
@@ -22,25 +26,29 @@ function PopUp(props, { postTitle, handleInputChange, postBody }) {
               placeholder="Post Title"
               onChange={handleInputChange}
             >
-              {postTitle}
+              {posttitle}
             </Form.Control>
           </Form.Group>
           <br />
           <Form.Group controlId="categorySelect">
             <Form.Label>Choose a Category</Form.Label>
-            <Form.Control as="select">
-              <option>Fitness</option>
-              <option>Groceries</option>
-              <option>Recipes</option>
-              <option>Mental Health</option>
-              <option>Resources</option>
-              <option>Misc.</option>
+            <Form.Control
+              as="select"
+              onChange={selectcategory}
+              value={selectcategory}
+            >
+              <option defaultValue="Fitness">Fitness</option>
+              <option value="Groceries">Groceries</option>
+              <option value="Recipes">Recipes</option>
+              <option value="Mental Health">Mental Health</option>
+              <option value="Resources">Resources</option>
+              <option value="Misc">Misc.</option>
             </Form.Control>
           </Form.Group>
 
           <Form.Group controlId="textBlock">
             <Form.Control as="textarea" rows="3" onChange={handleInputChange}>
-              {postBody}
+              {postbody}
             </Form.Control>
           </Form.Group>
         </Form>
@@ -51,5 +59,16 @@ function PopUp(props, { postTitle, handleInputChange, postBody }) {
     </Modal>
   );
 }
+
+PopUp.propTypes = {
+  drawerClickHandler: PropTypes.func.isRequired,
+  posttitle: PropTypes.string.isRequired,
+  handleInputChange: PropTypes.func.isRequired,
+  postbody: PropTypes.string.isRequired,
+  selectcategory: PropTypes.string.isRequired,
+  handleSelectCatChange: PropTypes.func.isRequired,
+};
+
+PropTypes.checkPropTypes();
 
 export default PopUp;

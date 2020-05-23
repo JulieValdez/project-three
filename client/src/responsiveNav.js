@@ -6,9 +6,9 @@ import BackDrop from "./components/Backdrop/Backdrop";
 class ResponsiveNav extends Component {
   state = {
     sideDrawerOpen: false,
-    postTitle: "",
-    // postCategory: "Fitness",
-    postBody: "",
+    posttitle: "",
+    selectcategory: "Fitness",
+    postbody: "",
   };
 
   drawerToggleClickHandler = () => {
@@ -29,6 +29,10 @@ class ResponsiveNav extends Component {
     });
   };
 
+  handleSelectCatChange = (event) => {
+    this.setState({ selectcategory: event.target.value });
+  };
+
   render() {
     let backDrop;
     if (this.state.sideDrawerOpen) {
@@ -38,9 +42,10 @@ class ResponsiveNav extends Component {
       <div style={{ height: "100%" }}>
         <Toolbar
           drawerClickHandler={this.drawerToggleClickHandler}
-          postTitle={this.state.postTitle}
+          posttitle={this.state.posttitle}
           handleInputChange={this.handleInputChange}
-          postBody={this.state.postBody}
+          postbody={this.state.postbody}
+          selectcategory={this.handleSelectCatChange}
         />
         <SideDrawer show={this.state.sideDrawerOpen} />
         {backDrop}
