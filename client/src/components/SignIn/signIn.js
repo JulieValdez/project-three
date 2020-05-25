@@ -1,32 +1,58 @@
-import React from 'react';
+import React, { useCallback, useContext } from 'react';
 import './style.css';
 import signinGraphic from '../assets/signinGraphic.svg';
 import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
+import { withRouter, Redirect } from 'react-router';
+import app from '../../firebase';
+import { AuthContext } from '../../Auth';
 
-function SignIn(props) {
+function SignIn({ history }) {
+	const handleLogin = useCallback(
+		async (event) => {
+			event.preventDefault();
+			const { email, password } = event.target.elements;
+			try {
+				await app.auth().signInWithEmailAndPassword(email.value, password.value);
+				history.push('/userhome');
+			} catch (error) {
+				console.log(error);
+				alert('User Not Found');
+			}
+		},
+		[ history ]
+	);
+
+	const { currentUser } = useContext(AuthContext);
+	if (currentUser) {
+		return <Redirect to="/userhome" />;
+	}
+
 	return (
 		<div className="sign-in">
 			<img className="sign-in-graphic" src={signinGraphic} />
 			<div class="sign-in-form">
-				<Form>
-					<Form.Group controlId="formBasicEmail">
-						<Form.Label>Email address</Form.Label>
-						<Form.Control type="email" placeholder="Enter email" />
-						<Form.Text className="text-muted">We'll never share your email with anyone else.</Form.Text>
-					</Form.Group>
-
-					<Form.Group controlId="formBasicPassword">
-						<Form.Label>Password</Form.Label>
-						<Form.Control type="password" placeholder="Password" />
-					</Form.Group>
+				<Form onSubmit={handleLogin}>
+					<label>
+						Email
+						<br></br>
+						<input name="email" type="email" placeholder="Email" />
+					</label>
+					
+					<label>
+						Password
+						<br></br>
+						<input name="password" type="password" placeholder="Password" />
+					</label>
+					<br></br>
+					we will never share your password with anyone.
 					<Button id="sign-in-button" variant="outline-info" type="submit">
 						Sign In
 					</Button>
-                
-                    <br></br>
-                    <span id="no-account">Don't have an account?</span>
-                    <br></br>
-                    <Button id="register-button" variant="info" type="submit" href="/register">
+
+					<br />
+					<span id="no-account">Don't have an account?</span>
+					<br />
+					<Button id="register-button" variant="info" href="/register">
 						Register
 					</Button>
 				</Form>
@@ -35,4 +61,4 @@ function SignIn(props) {
 	);
 }
 
-export default SignIn;
+export default withRouter(SignIn);
