@@ -22,16 +22,11 @@ const UploadImage = (props) => {
 
   return (
     <>
-      <div className="profilePicContainer">
-        <Figure.Image
-          width={150}
-          height={150}
-          alt="150x150"
-          src={ProfileIcon}
-          rounded
-          style={{ marginLeft: "30%", marginTop: "4rem" }}
-          onClick={() => imageUploader.current.click()}
-        />
+      <div
+        className="profilePicContainer"
+        src={ProfileIcon}
+        onClick={() => imageUploader.current.click()}
+      >
         <input
           type="file"
           accept="image/*"
@@ -45,13 +40,12 @@ const UploadImage = (props) => {
           ref={uploadedImage}
           width={150}
           height={150}
-          alt="150x150"
-          rounded
-          style={{ marginLeft: "30%", marginTop: "4rem", zIndex: "500" }}
+          style={{ marginLeft: "30%", marginTop: "4rem" }}
         />
       </div>
-      <h5 style={{ marginLeft: "20%" }}>
-        Click above to Upload Your Profile Pic
+
+      <h5 style={{ marginLeft: "20%", marginTop: "1rem" }}>
+        Click Box to Upload Profile Pic
       </h5>
     </>
   );
