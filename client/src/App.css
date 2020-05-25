@@ -7,6 +7,7 @@
     rgba(214, 225, 243, 1) 100%
   );
   min-height: 100vh;
+  display: flex;
 }
 
 @media (max-width: 768px) {

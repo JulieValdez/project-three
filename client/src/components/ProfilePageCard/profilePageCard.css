@@ -1,0 +1,13 @@
+.profilePageCard {
+  margin-left: 18%;
+  margin-top: 4%;
+}
+
+h3,
+h5 {
+  color: blueviolet;
+}
+
+.myPostsText {
+  font-weight: bold;
+}

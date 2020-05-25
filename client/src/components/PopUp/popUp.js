@@ -66,7 +66,6 @@ PopUp.propTypes = {
   handleInputChange: PropTypes.func.isRequired,
   postbody: PropTypes.string.isRequired,
   selectcategory: PropTypes.string.isRequired,
-  handleSelectCatChange: PropTypes.func.isRequired,
 };
 
 PropTypes.checkPropTypes();

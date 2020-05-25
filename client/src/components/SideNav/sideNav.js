@@ -1,6 +1,7 @@
 import React from "react";
 import "./sidenav.css";
 import ProfileCard from "../ProfileCard/profileCard";
+import app from '../../firebase';
 
 export function SideNav(props) {
   return (
@@ -16,10 +17,10 @@ export function SideNav(props) {
               <a href="#">Home</a>
             </li>
             <li>
-              <a href="#">Profile</a>
+              <a href="/profile">Profile</a>
             </li>
             <li>
-              <a href="#">Logout</a>
+            <button onClick = {()=>app.auth().signOut()}>Log out</button>
             </li>
             <li>
               <a href="#"></a>
