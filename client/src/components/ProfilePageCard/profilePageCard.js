@@ -3,8 +3,8 @@ import "./profilePageCard.css";
 import Card from "react-bootstrap/Card";
 import Figure from "react-bootstrap/Figure";
 import PostCard from "../PostCard/postCard";
-import ProfilePic from "../assets/profilepic.jpeg";
 import { Row, Col, Container } from "react-bootstrap";
+import UploadImage from "../UploadImage/uploadImage";
 
 const ProfilePageCard = (props) => {
   return (
@@ -21,28 +21,19 @@ const ProfilePageCard = (props) => {
                     </h3>
                     <br></br>
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Tincidunt eget nullam non nisi est. Dolor magna
-                      eget est lorem ipsum dolor sit amet consectetur. Tempus
-                      imperdiet nulla malesuada pellentesque. Interdum posuere
-                      lorem ipsum dolor sit amet consectetur adipiscing. In
-                      iaculis nunc sed augue lacus. magna etiam tempor.
+                      About Me: Lorem ipsum dolor sit amet, consectetur
+                      adipiscing elit, sed do eiusmod tempor incididunt ut
+                      labore et dolore magna aliqua. Tincidunt eget nullam non
+                      nisi est. Dolor magna eget est lorem ipsum dolor sit amet
+                      consectetur. Tempus imperdiet nulla malesuada
+                      pellentesque. Interdum posuere lorem ipsum dolor sit amet
+                      consectetur adipiscing. In iaculis nunc sed augue lacus.
+                      magna etiam tempor.
                     </p>
                   </div>
                 </Col>
                 <Col sm={4} md={6}>
-                  <div className="profilePicContainer">
-                    <Figure.Image
-                      width={150}
-                      height={150}
-                      alt="150x150"
-                      src={ProfilePic}
-                      rounded
-                      style={{ marginLeft: "30%", marginTop: "4rem" }}
-                    />
-                  </div>
-                  <h5 style={{ marginLeft: "35%" }}>User Caption</h5>
+                  <UploadImage />
                 </Col>
               </Row>
             </Container>
