@@ -5,10 +5,12 @@
   "proxy": "http://localhost:3001/",
   "dependencies": {
     "bootstrap": "^4.5.0",
+    "create-react-class": "^15.6.3",
     "prop-types": "^15.7.2",
     "react": "^16.6.3",
     "react-bootstrap": "^1.0.1",
     "react-dom": "^16.6.3",
+    "react-masonry-css": "^1.0.14",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^2.1.1"
   },
