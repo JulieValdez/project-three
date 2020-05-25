@@ -21,13 +21,14 @@ const ProfilePageCard = (props) => {
                     </h3>
                     <br></br>
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Tincidunt eget nullam non nisi est. Dolor magna
-                      eget est lorem ipsum dolor sit amet consectetur. Tempus
-                      imperdiet nulla malesuada pellentesque. Interdum posuere
-                      lorem ipsum dolor sit amet consectetur adipiscing. In
-                      iaculis nunc sed augue lacus. magna etiam tempor.
+                      About Me: Lorem ipsum dolor sit amet, consectetur
+                      adipiscing elit, sed do eiusmod tempor incididunt ut
+                      labore et dolore magna aliqua. Tincidunt eget nullam non
+                      nisi est. Dolor magna eget est lorem ipsum dolor sit amet
+                      consectetur. Tempus imperdiet nulla malesuada
+                      pellentesque. Interdum posuere lorem ipsum dolor sit amet
+                      consectetur adipiscing. In iaculis nunc sed augue lacus.
+                      magna etiam tempor.
                     </p>
                   </div>
                 </Col>
