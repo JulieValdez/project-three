@@ -14,8 +14,17 @@ if (process.env.NODE_ENV === "production") {
 
 // Connect to the Mongo DB
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/projectThree_db"
+  process.env.MONGODB_URI || "mongodb://localhost/projectThree_db",
+  { useNewUrlParser: true, useCreateIndex: true }
 );
+
+const connection = mongoose.connection;
+
+const postRouter = require("./routes/post.js");
+const userRouter = require("./routes/user.js");
+
+app.use("/post", postRouter);
+app.use("/user", userRouter);
 
 // Send every request to the React app
 // Define any API routes before this runs
