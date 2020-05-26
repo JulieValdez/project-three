@@ -5,6 +5,7 @@ import Figure from "react-bootstrap/Figure";
 import PostCard from "../PostCard/postCard";
 import { Row, Col, Container } from "react-bootstrap";
 import UploadImage from "../UploadImage/uploadImage";
+import ProfileAboutMe from "../ProfileAboutMe/profileAboutMe";
 
 const ProfilePageCard = (props) => {
   return (
@@ -14,25 +15,16 @@ const ProfilePageCard = (props) => {
           <Figure>
             <Container>
               <Row>
-                <Col sm={8} md={6}>
+                <Col sm={8} md={8}>
                   <div className="userInfoContainer">
                     <h3 style={{ textAlign: "center", marginTop: "2rem" }}>
                       UserName
                     </h3>
                     <br></br>
-                    <p>
-                      About Me: Lorem ipsum dolor sit amet, consectetur
-                      adipiscing elit, sed do eiusmod tempor incididunt ut
-                      labore et dolore magna aliqua. Tincidunt eget nullam non
-                      nisi est. Dolor magna eget est lorem ipsum dolor sit amet
-                      consectetur. Tempus imperdiet nulla malesuada
-                      pellentesque. Interdum posuere lorem ipsum dolor sit amet
-                      consectetur adipiscing. In iaculis nunc sed augue lacus.
-                      magna etiam tempor.
-                    </p>
+                    <ProfileAboutMe />
                   </div>
                 </Col>
-                <Col sm={4} md={6}>
+                <Col sm={4} md={4}>
                   <UploadImage />
                 </Col>
               </Row>
