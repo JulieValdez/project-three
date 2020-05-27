@@ -1,8 +1,8 @@
 import React from "react";
 import { Card } from "react-bootstrap";
-import "./style.css";
+import "./postCard.css";
 
-function PostCard(props) {
+function PostCard(props, { postTitle, selectCategory, postBody }) {
   return (
     <div className="container">
       <div className="post-card" style={{}}>
@@ -12,9 +12,9 @@ function PostCard(props) {
         />
 
         <Card.Body>
-          <Card.Title className="title">{props.posts.postTitle}</Card.Title>
-          <Card.Text>{props.posts.selectcategory}</Card.Text>
-          <Card.Text>{props.posts.postbody}</Card.Text>
+          <Card.Title className="title">{props.post.postTitle}</Card.Title>
+          <Card.Text>{props.post.selectCategory}</Card.Text>
+          <Card.Text>{props.post.postBody}</Card.Text>
         </Card.Body>
       </div>
     </div>

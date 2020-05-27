@@ -3,33 +3,14 @@ import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Masonry from "react-masonry-css";
 import axios from "axios";
-// import PostCard from "../PostCard/postCard";
+import PostCard from "../PostCard/postCard";
 import "./postCardList.css";
 
-function PostCard(props, { postTitle, selectCategory, postBody }) {
-  return (
-    <Masonry
-      breakpointCols={3}
-      className="my-masonry-grid"
-      columnClassName="my-masonry-grid_column"
-    >
-      <div className="container">
-        <div className="post-card" style={{}}>
-          <Card.Img
-            className="post-img"
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQgOnktiz3y5pOfm1AgVAdbAiCyHyBdcw_W-1IiO1UOMLxPClvH&usqp=CAU"
-          />
-
-          <Card.Body>
-            <Card.Title className="title">{props.post.postTitle}</Card.Title>
-            <Card.Text>{props.post.selectCategory}</Card.Text>
-            <Card.Text>{props.post.postBody}</Card.Text>
-          </Card.Body>
-        </div>
-      </div>
-    </Masonry>
-  );
-}
+const breakpointColumnsObj = {
+  default: 3,
+  700: 2,
+  500: 1,
+};
 
 class PostCardList extends Component {
   constructor(props) {
@@ -54,9 +35,15 @@ class PostCardList extends Component {
   render() {
     return (
       <div>
-        <ul className="postCardList">
-          <li>{this.PostCardList()}</li>
-        </ul>
+        <Masonry
+          breakpointCols={breakpointColumnsObj}
+          className="my-masonry-grid"
+          columnClassName="my-masonry-grid_column"
+        >
+          <ul className="postCardList">
+            <li>{this.PostCardList()}</li>
+          </ul>
+        </Masonry>
       </div>
     );
   }
