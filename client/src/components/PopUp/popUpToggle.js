@@ -2,7 +2,13 @@ import React from "react";
 import Button from "react-bootstrap/Button";
 import PopUp from "./popUp";
 
-function PopUpToggle({ posttitle, handleinputchange, postbody }) {
+function PopUpToggle({
+  posttitle,
+  handleinputchange,
+  postbody,
+  selectcategory,
+  currentselectedcategory,
+}) {
   const [modalShow, setModalShow] = React.useState(false);
 
   return (
@@ -22,6 +28,7 @@ function PopUpToggle({ posttitle, handleinputchange, postbody }) {
         handleinputchange={handleinputchange}
         postbody={postbody}
         selectcategory={handleinputchange}
+        currentselectedcategory={currentselectedcategory}
       />
     </>
   );

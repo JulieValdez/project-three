@@ -7,8 +7,9 @@ class ResponsiveNav extends Component {
   state = {
     sideDrawerOpen: false,
     posttitle: "",
-    selectcategory: "Fitness",
+    selectcategory: "",
     postbody: "",
+    currentselectedcategory: "",
   };
 
   drawerToggleClickHandler = () => {
@@ -46,6 +47,7 @@ class ResponsiveNav extends Component {
           handleinputchange={this.handleinputchange}
           postbody={this.state.postbody}
           selectcategory={this.handleinputchange}
+          currentselectedcategory={this.currentselectedcategory}
         />
         <SideDrawer show={this.state.sideDrawerOpen} />
         {backDrop}
