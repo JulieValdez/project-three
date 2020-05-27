@@ -21,7 +21,7 @@ class ResponsiveNav extends Component {
     this.setState({ sideDrawerOpen: false });
   };
 
-  handleInputChange = (event) => {
+  handleinputchange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
     this.setState({
@@ -43,9 +43,9 @@ class ResponsiveNav extends Component {
         <Toolbar
           drawerClickHandler={this.drawerToggleClickHandler}
           posttitle={this.state.posttitle}
-          handleInputChange={this.handleInputChange}
+          handleinputchange={this.handleinputchange}
           postbody={this.state.postbody}
-          selectcategory={this.handleInputChange}
+          selectcategory={this.handleinputchange}
         />
         <SideDrawer show={this.state.sideDrawerOpen} />
         {backDrop}

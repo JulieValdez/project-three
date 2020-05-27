@@ -1,14 +1,8 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
 import PopUp from "./popUp";
-import PropTypes from "prop-types";
 
-function PopUpToggle({
-  posttitle,
-  handleInputChange,
-  postbody,
-  selectcategory,
-}) {
+function PopUpToggle({ posttitle, handleinputchange, postbody }) {
   const [modalShow, setModalShow] = React.useState(false);
 
   return (
@@ -25,23 +19,12 @@ function PopUpToggle({
         show={modalShow}
         onHide={() => setModalShow(false)}
         posttitle={posttitle}
-        handleInputChange={handleInputChange}
+        handleinputchange={handleinputchange}
         postbody={postbody}
-        selectcategory={selectcategory}
+        selectcategory={handleinputchange}
       />
     </>
   );
 }
-
-PopUpToggle.propTypes = {
-  drawerClickHandler: PropTypes.func.isRequired,
-  posttitle: PropTypes.string.isRequired,
-  handleInputChange: PropTypes.func.isRequired,
-  postbody: PropTypes.string.isRequired,
-  selectcategory: PropTypes.string.isRequired,
-  handleSelectCatChange: PropTypes.func.isRequired,
-};
-
-PropTypes.checkPropTypes();
 
 export default PopUpToggle;

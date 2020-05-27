@@ -2,13 +2,12 @@ import React from "react";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import PropTypes from "prop-types";
 
 function PopUp(
   props,
-  { posttitle, handleInputChange, postbody, selectcategory }
+  { posttitle, handleinputchange, postbody, selectcategory }
 ) {
-  console.log(props.handleInputChange);
+  // console.log(props.handleinputchange);
 
   return (
     <Modal
@@ -26,7 +25,7 @@ function PopUp(
             <Form.Control
               type="text"
               placeholder="Post Title"
-              onChange={props.handleInputChange}
+              onChange={props.handleinputchange}
               name="posttitle"
             >
               {posttitle}
@@ -37,7 +36,7 @@ function PopUp(
             <Form.Label>Choose a Category</Form.Label>
             <Form.Control
               as="select"
-              onChange={props.handleInputChange}
+              onChange={props.handleinputchange}
               value=""
               name="selectcategory"
             >
@@ -54,7 +53,7 @@ function PopUp(
             <Form.Control
               as="textarea"
               rows="3"
-              onChange={props.handleInputChange}
+              onChange={props.handleinputchange}
               name="postbody"
             >
               {postbody}
@@ -68,15 +67,5 @@ function PopUp(
     </Modal>
   );
 }
-
-PopUp.propTypes = {
-  drawerClickHandler: PropTypes.func.isRequired,
-  posttitle: PropTypes.string.isRequired,
-  handleInputChange: PropTypes.func.isRequired,
-  postbody: PropTypes.string.isRequired,
-  selectcategory: PropTypes.string.isRequired,
-};
-
-PropTypes.checkPropTypes();
 
 export default PopUp;
