@@ -15,3 +15,8 @@
     display: none;
   }
 }
+
+.postCardList {
+  position: absolute;
+  right: 50px;
+}

@@ -8,7 +8,9 @@ class userHome extends Component {
   render() {
     return (
       <div className="App">
-        <PostCardList />
+        <div className="postCardList">
+          <PostCardList />
+        </div>
         <Wrapper />
 
         <ResponsiveNav />
