@@ -1,112 +1,21 @@
 import React from "react";
-import Masonry from "react-masonry-css";
+import { Card } from "react-bootstrap";
 import "./style.css";
 
 function PostCard(props) {
   return (
     <div className="container">
-      <div
-        className="post-card"
-        role="view post"
-        aria-label="click item"
-        style={{}}
-      >
-        <div className="info">
-          <span className="title">
-            <h1>POST TITLE</h1>
-            <img
-              className="post-img"
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQgOnktiz3y5pOfm1AgVAdbAiCyHyBdcw_W-1IiO1UOMLxPClvH&usqp=CAU"
-            />
-          </span>
-        </div>
-      </div>
+      <div className="post-card" style={{}}>
+        <Card.Img
+          className="post-img"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQgOnktiz3y5pOfm1AgVAdbAiCyHyBdcw_W-1IiO1UOMLxPClvH&usqp=CAU"
+        />
 
-      <div
-        className="post-card"
-        role="view post"
-        aria-label="click item"
-        style={{}}
-      >
-        <div className="info">
-          <span className="title">
-            <h1>POST TITLE</h1>
-            <img
-              className="post-img"
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQgOnktiz3y5pOfm1AgVAdbAiCyHyBdcw_W-1IiO1UOMLxPClvH&usqp=CAU"
-            />
-          </span>
-        </div>
-      </div>
-
-      <div
-        className="post-card"
-        role="view post"
-        aria-label="click item"
-        style={{}}
-      >
-        <div className="info">
-          <span className="title">
-            <h1>POST TITLE</h1>
-            <img
-              className="post-img"
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQgOnktiz3y5pOfm1AgVAdbAiCyHyBdcw_W-1IiO1UOMLxPClvH&usqp=CAU"
-            />
-          </span>
-        </div>
-      </div>
-
-      <div
-        className="post-card"
-        role="view post"
-        aria-label="click item"
-        style={{}}
-      >
-        <div className="info">
-          <span className="title">
-            <h1>POST TITLE</h1>
-            <img
-              className="post-img"
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQgOnktiz3y5pOfm1AgVAdbAiCyHyBdcw_W-1IiO1UOMLxPClvH&usqp=CAU"
-            />
-          </span>
-        </div>
-      </div>
-
-      <div
-        className="post-card"
-        role="view post"
-        aria-label="click item"
-        style={{}}
-      >
-        <div className="info">
-          <span className="title">
-            <h1>POST TITLE</h1>
-            <img
-              className="post-img"
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQgOnktiz3y5pOfm1AgVAdbAiCyHyBdcw_W-1IiO1UOMLxPClvH&usqp=CAU"
-            />
-          </span>
-        </div>
-      </div>
-
-      <div
-
-        className="post-card"
-        role="view post"
-        aria-label="click item"
-        style={{}}
-      >
-        <div className="info">
-          <span className="title">
-            <h1>POST TITLE</h1>
-            <img
-              className="post-img"
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQgOnktiz3y5pOfm1AgVAdbAiCyHyBdcw_W-1IiO1UOMLxPClvH&usqp=CAU"
-            />
-          </span>
-
-        </div>
+        <Card.Body>
+          <Card.Title className="title">{props.posts.postTitle}</Card.Title>
+          <Card.Text>{props.posts.selectcategory}</Card.Text>
+          <Card.Text>{props.posts.postbody}</Card.Text>
+        </Card.Body>
       </div>
     </div>
   );

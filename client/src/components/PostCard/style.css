@@ -2,9 +2,9 @@
   background-size: cover;
   background-position-x: 50%;
   background-position-y: center;
-  height: 500px;
+  /* height: 500px;
   width: 300px;
-  margin: 0px 10px 8px 10px;
+  margin: 0px 10px 8px 10px; */
   border-radius: 25px;
   border-color: rgb(204, 150, 0);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
@@ -21,25 +21,6 @@
   width: 250px;
   height: auto;
   border-radius: 8px;
-}
-
-.my-masonry-grid {
-  display: -webkit-box; /* Not needed if autoprefixing */
-  display: -ms-flexbox; /* Not needed if autoprefixing */
-  display: flex;
-  margin-left: -30px; /* gutter size offset */
-  width: auto;
-}
-.my-masonry-grid_column {
-  padding-left: 30px; /* gutter size */
-  background-clip: padding-box;
-}
-
-/* Style your items */
-.my-masonry-grid_column > div {
-  /* change div to reference your elements you put in <Masonry> */
-
-  margin-bottom: 3;
 }
 
 .container {

@@ -8,11 +8,13 @@ class userHome extends Component {
   render() {
     return (
       <div className="App">
+        <PostCardList />
         <Wrapper />
+
         <ResponsiveNav />
+
         <div className="desktopSideNavContainer">
           <SideNav />
-          <PostCardList />
         </div>
       </div>
     );
