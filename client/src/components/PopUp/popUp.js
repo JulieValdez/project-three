@@ -5,13 +5,7 @@ import Form from "react-bootstrap/Form";
 
 function PopUp(
   props,
-  {
-    posttitle,
-    handleinputchange,
-    postbody,
-    selectcategory,
-    currentselectedcategory,
-  }
+  { posttitle, handleinputchange, postbody, selectcategory, handlemodalopen }
 ) {
   // console.log(props.handleinputchange);
 
@@ -43,7 +37,7 @@ function PopUp(
             <Form.Control
               as="select"
               onChange={props.handleinputchange}
-              value={currentselectedcategory}
+              value={props.selectcategory}
               name="selectcategory"
             >
               <option defaultValue="Fitness">Fitness</option>
@@ -68,7 +62,9 @@ function PopUp(
         </Form>
       </Modal.Body>
       <Modal.Footer>
-        <Button type="submit">Submit</Button>
+        <Button onClick={props.handlemodalopen} type="submit">
+          Submit
+        </Button>
       </Modal.Footer>
     </Modal>
   );

@@ -9,7 +9,7 @@ class ResponsiveNav extends Component {
     posttitle: "",
     selectcategory: "",
     postbody: "",
-    currentselectedcategory: "",
+    modalopen: false,
   };
 
   drawerToggleClickHandler = () => {
@@ -30,9 +30,13 @@ class ResponsiveNav extends Component {
     });
   };
 
-  // handleSelectCatChange = (event) => {
-  //   this.setState({ selectcategory: event.target.value });
-  // };
+  handlemodalopen = (event) => {
+    this.setState({ modalopen: true });
+  };
+
+  handlemodalclose = (event) => {
+    this.setState({ modalopen: false });
+  };
 
   render() {
     let backDrop;
@@ -46,8 +50,10 @@ class ResponsiveNav extends Component {
           posttitle={this.state.posttitle}
           handleinputchange={this.handleinputchange}
           postbody={this.state.postbody}
-          selectcategory={this.handleinputchange}
-          currentselectedcategory={this.currentselectedcategory}
+          selectcategory={this.selectcategory}
+          handlemodalopen={this.handlemodalopen}
+          modalopenstatus={this.state.modalopen}
+          handlemodalclose={this.handlemodalclose}
         />
         <SideDrawer show={this.state.sideDrawerOpen} />
         {backDrop}

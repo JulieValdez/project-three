@@ -7,28 +7,28 @@ function PopUpToggle({
   handleinputchange,
   postbody,
   selectcategory,
-  currentselectedcategory,
+  handlemodalopen,
+  modalopenstatus,
+  handlemodalclose,
 }) {
-  const [modalShow, setModalShow] = React.useState(false);
-
   return (
     <>
       <Button
         variant="primary"
-        onClick={() => setModalShow(true)}
+        onClick={handlemodalopen}
         style={{ marginLeft: "500px" }}
       >
         Create a Post
       </Button>
 
       <PopUp
-        show={modalShow}
-        onHide={() => setModalShow(false)}
+        show={modalopenstatus}
+        onHide={handlemodalclose}
         posttitle={posttitle}
         handleinputchange={handleinputchange}
         postbody={postbody}
-        selectcategory={handleinputchange}
-        currentselectedcategory={currentselectedcategory}
+        selectcategory={selectcategory}
+        handlemodalopen={handlemodalopen}
       />
     </>
   );

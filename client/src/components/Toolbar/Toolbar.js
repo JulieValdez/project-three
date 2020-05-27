@@ -11,7 +11,9 @@ const toolbar = ({
   handleinputchange,
   postbody,
   selectcategory,
-  currentselectedcategory,
+  handlemodalopen,
+  modalopenstatus,
+  handlemodalclose,
 }) => (
   <header className="toolbar">
     <nav className="toolbar_navigation">
@@ -26,8 +28,10 @@ const toolbar = ({
         posttitle={posttitle}
         handleinputchange={handleinputchange}
         postbody={postbody}
-        selectcategory={handleinputchange}
-        currentselectedcategory={currentselectedcategory}
+        selectcategory={selectcategory}
+        handlemodalopen={handlemodalopen}
+        modalopenstatus={modalopenstatus}
+        handlemodalclose={handlemodalclose}
       />
       <div className="toolbar_nav-items">
         <ul>
