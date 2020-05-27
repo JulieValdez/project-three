@@ -1,7 +1,5 @@
 import React from "react";
 import "./uploadImage.css";
-import ProfileIcon from "../assets/profileicon.png";
-import Figure from "react-bootstrap/Figure";
 
 const UploadImage = (props) => {
   const uploadedImage = React.useRef(null);
@@ -24,7 +22,6 @@ const UploadImage = (props) => {
     <>
       <div
         className="profilePicContainer"
-        src={ProfileIcon}
         onClick={() => imageUploader.current.click()}
       >
         <input

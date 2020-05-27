@@ -2,12 +2,17 @@ import React, { Component } from "react";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import PropTypes from "prop-types";
 
 function PopUp(
   props,
+<<<<<<< HEAD
   { posttitle, handleInputChange, postbody, selectcategory, onSubmit }
+=======
+  { posttitle, handleinputchange, postbody, selectcategory, handlemodalopen }
+>>>>>>> b5cbefe1436b4e81812df40fc9df6fd227bfd0a2
 ) {
+  // console.log(props.handleinputchange);
+
   return (
     <Modal
       {...props}
@@ -24,7 +29,12 @@ function PopUp(
             <Form.Control
               type="text"
               placeholder="Post Title"
+<<<<<<< HEAD
               onChange={props.handleInputChange}
+=======
+              onChange={props.handleinputchange}
+              name="posttitle"
+>>>>>>> b5cbefe1436b4e81812df40fc9df6fd227bfd0a2
             >
               {posttitle}
             </Form.Control>
@@ -34,8 +44,14 @@ function PopUp(
             <Form.Label>Choose a Category</Form.Label>
             <Form.Control
               as="select"
+<<<<<<< HEAD
               onChange={props.handleInputChange}
               value=""
+=======
+              onChange={props.handleinputchange}
+              value={props.selectcategory}
+              name="selectcategory"
+>>>>>>> b5cbefe1436b4e81812df40fc9df6fd227bfd0a2
             >
               <option defaultValue="Fitness">Fitness</option>
               <option value="Groceries">Groceries</option>
@@ -50,7 +66,12 @@ function PopUp(
             <Form.Control
               as="textarea"
               rows="3"
+<<<<<<< HEAD
               onChange={props.handleInputChange}
+=======
+              onChange={props.handleinputchange}
+              name="postbody"
+>>>>>>> b5cbefe1436b4e81812df40fc9df6fd227bfd0a2
             >
               {postbody}
             </Form.Control>
@@ -58,7 +79,11 @@ function PopUp(
         </Form>
       </Modal.Body>
       <Modal.Footer>
+<<<<<<< HEAD
         <Button type="submit" onClick={props.onSubmit}>
+=======
+        <Button onClick={props.handlemodalopen} type="submit">
+>>>>>>> b5cbefe1436b4e81812df40fc9df6fd227bfd0a2
           Submit
         </Button>
       </Modal.Footer>
@@ -66,6 +91,7 @@ function PopUp(
   );
 }
 
+<<<<<<< HEAD
 // PopUp.propTypes = {
 //   drawerClickHandler: PropTypes.func.isRequired,
 //   posttitle: PropTypes.string.isRequired,
@@ -76,4 +102,6 @@ function PopUp(
 
 // PropTypes.checkPropTypes();
 
+=======
+>>>>>>> b5cbefe1436b4e81812df40fc9df6fd227bfd0a2
 export default PopUp;
