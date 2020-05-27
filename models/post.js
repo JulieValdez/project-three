@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const PostSchema = new Schema({
   userName: { type: Schema.Types.ObjectId, ref: "User" },
-  postTitle: { type: String, required: true },
+  postTitle: { type: String },
   selectCategory: [
     "Fitness",
     "Groceries",
@@ -14,7 +14,7 @@ const PostSchema = new Schema({
   ],
   postBody: { type: String, maxlength: 300 },
   comments: [
-    { text: String, postedBy: { type: Schema.Types.ObjectId, ref: "User" } },
+    { text: String, userName: { type: Schema.Types.ObjectId, ref: "User" } },
   ],
   likeCount: { type: Number },
 });

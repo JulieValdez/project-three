@@ -11,6 +11,7 @@ const toolbar = ({
   handleinputchange,
   postbody,
   selectcategory,
+  onSubmit,
   handlemodalopen,
   modalopenstatus,
   handlemodalclose,
@@ -29,6 +30,7 @@ const toolbar = ({
         handleinputchange={handleinputchange}
         postbody={postbody}
         selectcategory={selectcategory}
+        onSubmit={onSubmit}
         handlemodalopen={handlemodalopen}
         modalopenstatus={modalopenstatus}
         handlemodalclose={handlemodalclose}

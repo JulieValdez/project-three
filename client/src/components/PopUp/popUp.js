@@ -1,11 +1,18 @@
-import React from "react";
+import React, { Component } from "react";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
 function PopUp(
   props,
-  { posttitle, handleinputchange, postbody, selectcategory, handlemodalopen }
+  {
+    posttitle,
+    handleinputchange,
+    postbody,
+    selectcategory,
+    handlemodalopen,
+    onSubmit,
+  }
 ) {
   // console.log(props.handleinputchange);
 
@@ -20,7 +27,7 @@ function PopUp(
         <h4>Make a Post!</h4>
       </Modal.Header>
       <Modal.Body>
-        <Form>
+        <Form onSubmit={props.onSubmit}>
           <Form.Group controlId="formTitle">
             <Form.Control
               type="text"
@@ -62,7 +69,7 @@ function PopUp(
         </Form>
       </Modal.Body>
       <Modal.Footer>
-        <Button onClick={props.handlemodalopen} type="submit">
+        <Button onClick={props.onSubmit} type="submit">
           Submit
         </Button>
       </Modal.Footer>

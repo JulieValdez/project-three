@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import axios from "axios";
 import Toolbar from "./components/Toolbar/Toolbar";
 import SideDrawer from "./components/SideDrawer/SideDrawer";
 import BackDrop from "./components/Backdrop/Backdrop";
@@ -38,6 +39,21 @@ class ResponsiveNav extends Component {
     this.setState({ modalopen: false });
   };
 
+  onSubmit = (e) => {
+    alert("hello");
+    e.preventDefault();
+
+    const post = {
+      postTitle: this.state.posttitle,
+      selectCategory: this.state.selectcategory,
+      postBody: this.state.postbody,
+    };
+    axios.post("/addpost", post).then((res) => {
+      console.log(res.data);
+      this.handlemodalclose();
+    });
+  };
+
   render() {
     let backDrop;
     if (this.state.sideDrawerOpen) {
@@ -50,6 +66,7 @@ class ResponsiveNav extends Component {
           posttitle={this.state.posttitle}
           handleinputchange={this.handleinputchange}
           postbody={this.state.postbody}
+          onSubmit={this.onSubmit}
           selectcategory={this.selectcategory}
           handlemodalopen={this.handlemodalopen}
           modalopenstatus={this.state.modalopen}

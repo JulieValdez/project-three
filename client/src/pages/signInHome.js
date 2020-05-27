@@ -10,12 +10,12 @@ class signInHome extends Component {
     return (
       <div className="App">
         <div className="row">
-          <div class="col-sm-8">
+          <div className="col-sm-8">
             <sign_in></sign_in>
             <TopNav />
             <PostCard />
           </div>
-          <div class="col-sm-4">
+          <div className="col-sm-4">
             <SignIn />
           </div>
         </div>

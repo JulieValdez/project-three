@@ -9,7 +9,7 @@ app.use(express.json());
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
+  app.use(express.static("client/public"));
 }
 
 // Connect to the Mongo DB
@@ -20,11 +20,15 @@ mongoose.connect(
 
 const connection = mongoose.connection;
 
-const postRouter = require("./routes/post.js");
-const userRouter = require("./routes/user.js");
+connection.once("open", function () {
+  console.log("Mongo db connection established successfully");
+});
 
-app.use("/post", postRouter);
-app.use("/user", userRouter);
+const postRouter = require("./routes/api/post.js");
+// const userRouter = require("./routes/user.js");
+
+app.use("/", postRouter);
+// app.use("/", userRouter);
 
 // Send every request to the React app
 // Define any API routes before this runs

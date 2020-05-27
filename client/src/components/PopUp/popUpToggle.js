@@ -7,6 +7,7 @@ function PopUpToggle({
   handleinputchange,
   postbody,
   selectcategory,
+  onSubmit,
   handlemodalopen,
   modalopenstatus,
   handlemodalclose,
@@ -27,6 +28,7 @@ function PopUpToggle({
         posttitle={posttitle}
         handleinputchange={handleinputchange}
         postbody={postbody}
+        onSubmit={onSubmit}
         selectcategory={selectcategory}
         handlemodalopen={handlemodalopen}
       />
