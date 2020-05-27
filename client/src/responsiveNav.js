@@ -48,7 +48,10 @@ class ResponsiveNav extends Component {
       selectCategory: this.state.selectcategory,
       postBody: this.state.postbody,
     };
-    axios.post("/addpost", post).then((res) => console.log(res.data));
+    axios.post("/addpost", post).then((res) => {
+      console.log(res.data);
+      this.handlemodalclose();
+    });
   };
 
   render() {
