@@ -2,18 +2,19 @@ import React, { Component } from "react";
 
 import Wrapper from "../components/Wrapper/wrapper";
 import TopNav from "../components/TopNav/topNav";
-import PostCard from "../components/PostCard/postCard";
+import PostCardList from "../components/PostCardList/postCardList";
 import SignIn from "../components/SignIn/signIn";
 
-class signInHome extends Component {
+class SignInHome extends Component {
   render() {
     return (
       <div className="App">
         <div className="row">
           <div className="col-sm-8">
             <sign_in></sign_in>
+
             <TopNav />
-            <PostCard />
+            <PostCardList />
           </div>
           <div className="col-sm-4">
             <SignIn />
@@ -24,4 +25,4 @@ class signInHome extends Component {
   }
 }
 
-export default signInHome;
+export default SignInHome;

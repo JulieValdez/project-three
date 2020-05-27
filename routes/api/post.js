@@ -1,7 +1,7 @@
 const router = require("express").Router();
 let Post = require("../../models/post");
 
-router.get("/", (req, res) => {
+router.get("/post", (req, res) => {
   Post.find()
     .then((posts) => res.json(posts))
     .catch((err) => res.status(400).json("Error: " + err));
