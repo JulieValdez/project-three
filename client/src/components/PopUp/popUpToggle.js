@@ -8,6 +8,7 @@ function PopUpToggle({
   handleInputChange,
   postbody,
   selectcategory,
+  onSubmit,
 }) {
   const [modalShow, setModalShow] = React.useState(false);
 
@@ -27,7 +28,8 @@ function PopUpToggle({
         posttitle={posttitle}
         handleInputChange={handleInputChange}
         postbody={postbody}
-        selectcategory={selectcategory}
+        selectCategory={selectcategory}
+        onSubmit={onSubmit}
       />
     </>
   );

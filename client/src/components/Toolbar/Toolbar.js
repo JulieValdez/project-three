@@ -12,6 +12,7 @@ const toolbar = ({
   handleInputChange,
   postbody,
   selectcategory,
+  onSubmit,
 }) => (
   <header className="toolbar">
     <nav className="toolbar_navigation">
@@ -27,6 +28,7 @@ const toolbar = ({
         handleInputChange={handleInputChange}
         postbody={postbody}
         selectcategory={selectcategory}
+        onSubmit={onSubmit}
       />
       <div className="toolbar_nav-items">
         <ul>
