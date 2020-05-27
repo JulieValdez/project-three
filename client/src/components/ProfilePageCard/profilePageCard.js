@@ -15,7 +15,7 @@ const ProfilePageCard = (props) => {
           <Figure>
             <Container>
               <Row>
-                <Col sm={8} md={8}>
+                <Col>
                   <div className="userInfoContainer">
                     <h3 style={{ textAlign: "center", marginTop: "2rem" }}>
                       UserName
@@ -24,7 +24,7 @@ const ProfilePageCard = (props) => {
                     <ProfileAboutMe />
                   </div>
                 </Col>
-                <Col sm={4} md={4}>
+                <Col>
                   <UploadImage />
                 </Col>
               </Row>
@@ -37,8 +37,8 @@ const ProfilePageCard = (props) => {
                   </h3>
                   <PostCard />
                 </Col>
-                <Col sm={2} md={2}></Col>
-                <Col sm={5} md={5}>
+                <Col sm={1} md={1}></Col>
+                <Col sm={6} md={6}>
                   <PostCard />
                 </Col>
               </Row>

@@ -29,9 +29,9 @@ class ResponsiveNav extends Component {
     });
   };
 
-  handleSelectCatChange = (event) => {
-    this.setState({ selectcategory: event.target.value });
-  };
+  // handleSelectCatChange = (event) => {
+  //   this.setState({ selectcategory: event.target.value });
+  // };
 
   render() {
     let backDrop;
@@ -45,7 +45,7 @@ class ResponsiveNav extends Component {
           posttitle={this.state.posttitle}
           handleInputChange={this.handleInputChange}
           postbody={this.state.postbody}
-          selectcategory={this.handleSelectCatChange}
+          selectcategory={this.handleInputChange}
         />
         <SideDrawer show={this.state.sideDrawerOpen} />
         {backDrop}

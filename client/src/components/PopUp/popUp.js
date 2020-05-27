@@ -8,6 +8,8 @@ function PopUp(
   props,
   { posttitle, handleInputChange, postbody, selectcategory }
 ) {
+  console.log(props.handleInputChange);
+
   return (
     <Modal
       {...props}
@@ -24,7 +26,8 @@ function PopUp(
             <Form.Control
               type="text"
               placeholder="Post Title"
-              onChange={handleInputChange}
+              onChange={props.handleInputChange}
+              name="posttitle"
             >
               {posttitle}
             </Form.Control>
@@ -34,8 +37,9 @@ function PopUp(
             <Form.Label>Choose a Category</Form.Label>
             <Form.Control
               as="select"
-              onChange={selectcategory}
-              value={selectcategory}
+              onChange={props.handleInputChange}
+              value=""
+              name="selectcategory"
             >
               <option defaultValue="Fitness">Fitness</option>
               <option value="Groceries">Groceries</option>
@@ -47,7 +51,12 @@ function PopUp(
           </Form.Group>
 
           <Form.Group controlId="textBlock">
-            <Form.Control as="textarea" rows="3" onChange={handleInputChange}>
+            <Form.Control
+              as="textarea"
+              rows="3"
+              onChange={props.handleInputChange}
+              name="postbody"
+            >
               {postbody}
             </Form.Control>
           </Form.Group>
