@@ -7,8 +7,9 @@ class ResponsiveNav extends Component {
   state = {
     sideDrawerOpen: false,
     posttitle: "",
-    selectcategory: "Fitness",
+    selectcategory: "",
     postbody: "",
+    modalopen: false,
   };
 
   drawerToggleClickHandler = () => {
@@ -21,7 +22,7 @@ class ResponsiveNav extends Component {
     this.setState({ sideDrawerOpen: false });
   };
 
-  handleInputChange = (event) => {
+  handleinputchange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
     this.setState({
@@ -29,8 +30,12 @@ class ResponsiveNav extends Component {
     });
   };
 
-  handleSelectCatChange = (event) => {
-    this.setState({ selectcategory: event.target.value });
+  handlemodalopen = (event) => {
+    this.setState({ modalopen: true });
+  };
+
+  handlemodalclose = (event) => {
+    this.setState({ modalopen: false });
   };
 
   render() {
@@ -43,9 +48,12 @@ class ResponsiveNav extends Component {
         <Toolbar
           drawerClickHandler={this.drawerToggleClickHandler}
           posttitle={this.state.posttitle}
-          handleInputChange={this.handleInputChange}
+          handleinputchange={this.handleinputchange}
           postbody={this.state.postbody}
-          selectcategory={this.handleSelectCatChange}
+          selectcategory={this.selectcategory}
+          handlemodalopen={this.handlemodalopen}
+          modalopenstatus={this.state.modalopen}
+          handlemodalclose={this.handlemodalclose}
         />
         <SideDrawer show={this.state.sideDrawerOpen} />
         {backDrop}
