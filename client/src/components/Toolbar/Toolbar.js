@@ -42,11 +42,11 @@ const toolbar = ({
           <li></li>
           <li>
             <Dropdown>
-              <Dropdown.Toggle variant="success" id="dropdown-basic">
+              <Dropdown.Toggle variant="info" id="dropdown-basic">
                 Filter Posts by Category
               </Dropdown.Toggle>
 
-              <Dropdown.Menu>
+              <Dropdown.Menu style={{}}>
                 <Dropdown.Item href="#/action-1" style={{ color: "#0a0404" }}>
                   Fitness
                 </Dropdown.Item>
@@ -56,10 +56,10 @@ const toolbar = ({
                 <Dropdown.Item href="#/action-3" style={{ color: "#0a0404" }}>
                   Mental Health
                 </Dropdown.Item>
-                <Dropdown.Item href="#/action-3" style={{ color: "#0a0404" }}>
+                <Dropdown.Item href="#/action-4" style={{ color: "#0a0404" }}>
                   Resources
                 </Dropdown.Item>
-                <Dropdown.Item href="#/action-3" style={{ color: "#0a0404" }}>
+                <Dropdown.Item href="#/action-5" style={{ color: "#0a0404" }}>
                   Misc
                 </Dropdown.Item>
               </Dropdown.Menu>
