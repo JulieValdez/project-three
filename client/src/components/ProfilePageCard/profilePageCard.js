@@ -9,7 +9,7 @@ const ProfilePageCard = (props) => {
   console.log(props);
 
   return (
-    <Card className="profilePageCard" style={{ width: "80rem" }}>
+    <Card className="profilePageCard" style={{ width: "70%" }}>
       <div className="profilePageCardBody">
         <Card.Body>
           <Figure>
@@ -21,7 +21,7 @@ const ProfilePageCard = (props) => {
                       <Card.Img
                         className="center"
                         id="profilePic"
-                        variant="top"
+                        variant="center"
                         src={ProfilePic}
                       />
                     </div>

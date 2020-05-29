@@ -16,7 +16,7 @@ function PopUpToggle({
   return (
     <>
       <Button
-        variant="primary"
+        variant="info"
         onClick={handlemodalopen}
         style={{ marginLeft: "500px" }}
       >
