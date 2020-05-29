@@ -38,27 +38,29 @@ const toolbar = ({
       <div className="toolbar_nav-items">
         <ul>
           {/* can use router but here using normal anchor tags below */}
-          <li>
-            <a href="/">Products</a>
-          </li>
-          <li>
-            <a href="/">Users</a>
-          </li>
+          <li></li>
+          <li></li>
           <li>
             <Dropdown>
-              <Dropdown.Toggle variant="success" id="dropdown-basic">
-                Dropdown Button
+              <Dropdown.Toggle variant="info" id="dropdown-basic">
+                Filter Posts by Category
               </Dropdown.Toggle>
 
-              <Dropdown.Menu>
+              <Dropdown.Menu style={{}}>
                 <Dropdown.Item href="#/action-1" style={{ color: "#0a0404" }}>
-                  Action
+                  Fitness
                 </Dropdown.Item>
                 <Dropdown.Item href="#/action-2" style={{ color: "#0a0404" }}>
-                  Another action
+                  Recipes
                 </Dropdown.Item>
                 <Dropdown.Item href="#/action-3" style={{ color: "#0a0404" }}>
-                  Something else
+                  Mental Health
+                </Dropdown.Item>
+                <Dropdown.Item href="#/action-4" style={{ color: "#0a0404" }}>
+                  Resources
+                </Dropdown.Item>
+                <Dropdown.Item href="#/action-5" style={{ color: "#0a0404" }}>
+                  Misc
                 </Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
