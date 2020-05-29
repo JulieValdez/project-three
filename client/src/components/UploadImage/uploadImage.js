@@ -42,7 +42,7 @@ const UploadImage = (props) => {
       </div>
 
       <h5 style={{ marginLeft: "20%", marginTop: "1rem" }}>
-        Click Box to Upload Profile Pic
+        Click Box to Upload Pic
       </h5>
     </>
   );

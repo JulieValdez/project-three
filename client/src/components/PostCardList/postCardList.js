@@ -28,21 +28,25 @@ class PostCardList extends Component {
 
   PostCardList() {
     return this.state.posts.map((currentpost) => {
-      return <PostCard post={currentpost} key={currentpost._id} />;
+      return (
+        <PostCard
+          className="masonry-post"
+          post={currentpost}
+          key={currentpost._id}
+        />
+      );
     });
   }
 
   render() {
     return (
-      <div>
+      <div className="post-card-list">
         <Masonry
           breakpointCols={breakpointColumnsObj}
           className="my-masonry-grid"
           columnClassName="my-masonry-grid_column"
         >
-          <ul className="postCardList">
-            <li>{this.PostCardList()}</li>
-          </ul>
+          {this.PostCardList()}
         </Masonry>
       </div>
     );
