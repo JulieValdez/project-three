@@ -25,10 +25,10 @@ connection.once("open", function () {
 });
 
 const postRouter = require("./routes/api/post.js");
-// const userRouter = require("./routes/user.js");
+const userRouter = require("./routes/api/user.js");
 
 app.use("/", postRouter);
-// app.use("/", userRouter);
+app.use("/", userRouter);
 
 // Send every request to the React app
 // Define any API routes before this runs

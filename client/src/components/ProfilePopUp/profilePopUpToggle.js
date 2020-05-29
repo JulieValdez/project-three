@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react';
 import Button from 'react-bootstrap/Button';
-import profilePopUp from '../ProfilePopUp/profilePopUp';
 import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
 
