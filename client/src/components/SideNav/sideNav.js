@@ -1,7 +1,7 @@
 import React from "react";
 import "./sidenav.css";
 import ProfileCard from "../ProfileCard/profileCard";
-import app from '../../firebase';
+import app from "../../firebase";
 
 export function SideNav(props) {
   return (
@@ -14,13 +14,13 @@ export function SideNav(props) {
 
           <ul className="list-unstyled components">
             <li>
-              <a href="#">Home</a>
+              <a href="/">Home</a>
             </li>
             <li>
               <a href="/profile">Profile</a>
             </li>
             <li>
-            <button onClick = {()=>app.auth().signOut()}>Log out</button>
+              <button onClick={() => app.auth().signOut()}>Log out</button>
             </li>
             <li>
               <a href="#"></a>

@@ -5,7 +5,9 @@ import SideNav from "../components/SideNav/sideNav";
 import ProfilePageCard from "../components/ProfilePageCard/profilePageCard";
 
 class userProfile extends Component {
-  render() {
+  render(props) {
+    console.log(props);
+
     return (
       <div className="App">
         <Wrapper />

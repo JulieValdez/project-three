@@ -12,7 +12,7 @@ function PostCard(props, { postTitle, selectCategory, postBody }) {
         />
 
         <Card.Body>
-          <Card.Title className="title">{props.post.postTitle}</Card.Title>
+          <Card.Title className="title">{props.post.posttitle}</Card.Title>
           <Card.Text>{props.post.selectCategory}</Card.Text>
           <Card.Text>{props.post.postBody}</Card.Text>
         </Card.Body>
