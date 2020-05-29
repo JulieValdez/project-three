@@ -2,10 +2,8 @@ import React from "react";
 import "./profilePageCard.css";
 import Card from "react-bootstrap/Card";
 import Figure from "react-bootstrap/Figure";
-import PostCard from "../PostCard/postCard";
 import { Row, Col, Container } from "react-bootstrap";
-
-import ProfileAboutMe from "../ProfileAboutMe/profileAboutMe";
+import ProfilePic from "../assets/profilepic.jpeg";
 
 const ProfilePageCard = (props) => {
   console.log(props);
@@ -19,14 +17,39 @@ const ProfilePageCard = (props) => {
               <Row>
                 <Col>
                   <div className="userInfoContainer">
-                    <h3 style={{ textAlign: "center", marginTop: "2rem" }}>
-                      UserName
+                    <div className="profilePicPlaceholder">
+                      <Card.Img
+                        className="center"
+                        id="profilePic"
+                        variant="top"
+                        src={ProfilePic}
+                      />
+                    </div>
+                    <h3
+                      style={{ textAlign: "center", marginTop: "2rem" }}
+                      className="userNamePlaceholder"
+                    >
+                      Jane Doe
                     </h3>
                     <br></br>
-                    <ProfileAboutMe />
+                    <h6>About Me:</h6>
+                    <p className="aboutMePlaceholder">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Nunc eget lorem dolor sed viverra ipsum. Non
+                      consectetur a erat nam at lectus. Sed viverra ipsum nunc
+                      aliquet bibendum enim facilisis gravida neque. Et
+                      malesuada fames ac turpis egestas sed tempus urna et. In
+                      vitae turpis massa sed elementum tempus. Accumsan sit amet
+                      nulla facilisi morbi tempus. Amet justo donec enim diam
+                      vulputate ut pharetra. Tincidunt arcu non sodales neque
+                      sodales ut etiam sit amet. Nunc non blandit massa enim nec
+                      dui nunc mattis enim. Neque egestas congue quisque egestas
+                      diam in arcu cursus. Risus ultricies tristique nulla
+                      aliquet enim tortor at auctor urna.
+                    </p>
                   </div>
                 </Col>
-                <Col></Col>
               </Row>
             </Container>
           </Figure>
