@@ -19,4 +19,6 @@
 .postCardList {
   position: absolute;
   right: 50px;
+  padding-left: 300px;
+  padding-top: 75px;
 }

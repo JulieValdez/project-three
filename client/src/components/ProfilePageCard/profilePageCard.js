@@ -7,7 +7,7 @@ import { Row, Col, Container } from "react-bootstrap";
 import UploadImage from "../UploadImage/uploadImage";
 import ProfileAboutMe from "../ProfileAboutMe/profileAboutMe";
 
-const ProfilePageCard = (props) => {
+const ProfilePageCard = (props, { posttitle, selectcategory, postbody }) => {
   return (
     <Card className="profilePageCard" style={{ width: "80rem" }}>
       <div className="profilePageCardBody">

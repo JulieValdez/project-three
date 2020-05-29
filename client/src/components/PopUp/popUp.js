@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import UploadImage from "../UploadImage/uploadImage";
 
 function PopUp(
   props,
@@ -66,6 +67,7 @@ function PopUp(
               {postbody}
             </Form.Control>
           </Form.Group>
+          <UploadImage />
         </Form>
       </Modal.Body>
       <Modal.Footer>
