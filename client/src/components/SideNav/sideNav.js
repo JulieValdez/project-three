@@ -6,7 +6,7 @@ import app from "../../firebase";
 export function SideNav(props) {
   return (
     <div>
-      <div className="sidebarWrapper" style={{ pointerEvents: "none" }}>
+      <div className="sidebarWrapper" style={{}}>
         <nav id="sidebar">
           <div className="sidebar-header">
             <ProfileCard />
