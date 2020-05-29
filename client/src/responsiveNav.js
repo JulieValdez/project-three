@@ -4,6 +4,7 @@ import Toolbar from "./components/Toolbar/Toolbar";
 import SideDrawer from "./components/SideDrawer/SideDrawer";
 import BackDrop from "./components/Backdrop/Backdrop";
 
+
 class ResponsiveNav extends Component {
   state = {
     sideDrawerOpen: false,
@@ -12,6 +13,7 @@ class ResponsiveNav extends Component {
     postbody: "",
     modalopen: false,
   };
+
 
   drawerToggleClickHandler = () => {
     this.setState((prevState) => {

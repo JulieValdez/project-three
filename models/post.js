@@ -4,15 +4,9 @@ const Schema = mongoose.Schema;
 const PostSchema = new Schema({
   userName: { type: Schema.Types.ObjectId, ref: "User" },
   postTitle: { type: String },
-  selectCategory: [
-    "Fitness",
-    "Groceries",
-    "Recipes",
-    "MentalHealth",
-    "Resources",
-    "Misc",
-  ],
+  selectCategory: { type: String },
   postBody: { type: String, maxlength: 300 },
+
   comments: [
     { text: String, userName: { type: Schema.Types.ObjectId, ref: "User" } },
   ],
