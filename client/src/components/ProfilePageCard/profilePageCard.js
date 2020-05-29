@@ -2,12 +2,12 @@ import React from "react";
 import "./profilePageCard.css";
 import Card from "react-bootstrap/Card";
 import Figure from "react-bootstrap/Figure";
-import PostCard from "../PostCard/postCard";
 import { Row, Col, Container } from "react-bootstrap";
-import UploadImage from "../UploadImage/uploadImage";
-import ProfileAboutMe from "../ProfileAboutMe/profileAboutMe";
+import ProfilePic from "../assets/profilepic.jpeg";
 
-const ProfilePageCard = (props, { posttitle, selectcategory, postbody }) => {
+const ProfilePageCard = (props) => {
+  console.log(props);
+
   return (
     <Card className="profilePageCard" style={{ width: "80rem" }}>
       <div className="profilePageCardBody">
@@ -17,29 +17,38 @@ const ProfilePageCard = (props, { posttitle, selectcategory, postbody }) => {
               <Row>
                 <Col>
                   <div className="userInfoContainer">
-                    <h3 style={{ textAlign: "center", marginTop: "2rem" }}>
-                      UserName
+                    <div className="profilePicPlaceholder">
+                      <Card.Img
+                        className="center"
+                        id="profilePic"
+                        variant="top"
+                        src={ProfilePic}
+                      />
+                    </div>
+                    <h3
+                      style={{ textAlign: "center", marginTop: "2rem" }}
+                      className="userNamePlaceholder"
+                    >
+                      Jane Doe
                     </h3>
                     <br></br>
-                    <ProfileAboutMe />
+                    <h6>About Me:</h6>
+                    <p className="aboutMePlaceholder">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Nunc eget lorem dolor sed viverra ipsum. Non
+                      consectetur a erat nam at lectus. Sed viverra ipsum nunc
+                      aliquet bibendum enim facilisis gravida neque. Et
+                      malesuada fames ac turpis egestas sed tempus urna et. In
+                      vitae turpis massa sed elementum tempus. Accumsan sit amet
+                      nulla facilisi morbi tempus. Amet justo donec enim diam
+                      vulputate ut pharetra. Tincidunt arcu non sodales neque
+                      sodales ut etiam sit amet. Nunc non blandit massa enim nec
+                      dui nunc mattis enim. Neque egestas congue quisque egestas
+                      diam in arcu cursus. Risus ultricies tristique nulla
+                      aliquet enim tortor at auctor urna.
+                    </p>
                   </div>
-                </Col>
-                <Col>
-                  <UploadImage />
-                </Col>
-              </Row>
-            </Container>
-            <Container>
-              <Row>
-                <Col sm={5} md={5}>
-                  <h3 className="myPostsText" style={{ marginLeft: "2rem" }}>
-                    My Posts
-                  </h3>
-                  <PostCard />
-                </Col>
-                <Col sm={1} md={1}></Col>
-                <Col sm={6} md={6}>
-                  <PostCard />
                 </Col>
               </Row>
             </Container>
