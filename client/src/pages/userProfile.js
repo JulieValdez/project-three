@@ -9,14 +9,14 @@ class userProfile extends Component {
     console.log(props);
 
     return (
-      <div className="App">
+      <>
         <Wrapper />
         <ResponsiveNav />
         <div className="desktopSideNavContainer">
           <SideNav />
         </div>
         <ProfilePageCard />
-      </div>
+      </>
     );
   }
 }
