@@ -4,7 +4,6 @@ import Toolbar from "./components/Toolbar/Toolbar";
 import SideDrawer from "./components/SideDrawer/SideDrawer";
 import BackDrop from "./components/Backdrop/Backdrop";
 
-
 class ResponsiveNav extends Component {
   state = {
     sideDrawerOpen: false,
@@ -12,8 +11,8 @@ class ResponsiveNav extends Component {
     selectcategory: "",
     postbody: "",
     modalopen: false,
+    imageId: "",
   };
-
 
   drawerToggleClickHandler = () => {
     this.setState((prevState) => {
@@ -30,6 +29,12 @@ class ResponsiveNav extends Component {
     const value = event.target.value;
     this.setState({
       [name]: value,
+    });
+  };
+
+  handleImageChange = (image) => {
+    this.setState({
+      imageId: image,
     });
   };
 
@@ -67,6 +72,7 @@ class ResponsiveNav extends Component {
           drawerClickHandler={this.drawerToggleClickHandler}
           posttitle={this.state.posttitle}
           handleinputchange={this.handleinputchange}
+          handleImageChange={this.handleImageChange}
           postbody={this.state.postbody}
           onSubmit={this.onSubmit}
           selectcategory={this.selectcategory}

@@ -9,6 +9,7 @@ const toolbar = ({
   drawerClickHandler,
   posttitle,
   handleinputchange,
+  handleImageChange,
   postbody,
   selectcategory,
   onSubmit,
@@ -28,6 +29,7 @@ const toolbar = ({
       <PopUpToggle
         posttitle={posttitle}
         handleinputchange={handleinputchange}
+        handleImageChange={handleImageChange}
         postbody={postbody}
         selectcategory={selectcategory}
         onSubmit={onSubmit}
