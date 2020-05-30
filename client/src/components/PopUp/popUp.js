@@ -5,8 +5,6 @@ import Form from "react-bootstrap/Form";
 import CategorySelect from "../CategorySelect/categorySelect";
 
 function PopUp(props, { posttitle, postbody }) {
-  console.log(props);
-
   return (
     <Modal
       {...props}
