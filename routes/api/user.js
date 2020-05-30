@@ -7,12 +7,23 @@ router.get("/", (req, res) => {
     .catch((err) => res.status(400).json("error: " + err));
 });
 
-router.post("/addUser", (req, res) => {
-  const userName = req.body.userName;
-  const newUser = new User({ userName });
+router.post("/userprofile", (req, res) => {
+  console.log(req.body);
+  const userId = req.body.userId;
+  const userhandle = req.body.userhandle;
+  const bio = req.body.bio;
+  const website = req.body.website;
+  const hobbies = req.body.hobbies;
+  const newUser = new User({
+    userId,
+    userhandle,
+    bio,
+    website,
+    hobbies
+  });
   newUser
     .save()
-    .then(() => res.json("User added"))
+    .then(() => res.json("User Profile added"))
     .catch((err) => res.status(400).json("Error: " + err));
 });
 
