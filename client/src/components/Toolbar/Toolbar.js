@@ -15,6 +15,7 @@ const toolbar = ({
   handlemodalopen,
   modalopenstatus,
   handlemodalclose,
+  handleFilterCategoryChange,
 }) => (
   <header className="toolbar">
     <nav className="toolbar_navigation">
@@ -41,7 +42,10 @@ const toolbar = ({
           <li></li>
           <li></li>
           <li>
-            <Dropdown className="filter-dropdown">
+            <Dropdown
+              className="filter-dropdown"
+              handleFilterCategoryChange={handleFilterCategoryChange}
+            >
               <Dropdown.Toggle variant="info" id="dropdown-basic">
                 Filter Posts by Category
               </Dropdown.Toggle>
