@@ -1,20 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import CategorySelect from "../CategorySelect/categorySelect";
 
-function PopUp(
-  props,
-  {
-    posttitle,
-    handleinputchange,
-    postbody,
-    selectcategory,
-    handlemodalopen,
-    onSubmit,
-  }
-) {
-  // console.log(props.handleinputchange);
+function PopUp(props, { posttitle, postbody }) {
+  console.log(props);
 
   return (
     <Modal
@@ -39,22 +30,10 @@ function PopUp(
             </Form.Control>
           </Form.Group>
           <br />
-          <Form.Group controlId="categorySelect">
-            <Form.Label>Choose a Category</Form.Label>
-            <Form.Control
-              as="select"
-              onChange={props.handleinputchange}
-              value={props.selectcategory}
-              name="selectcategory"
-            >
-              <option defaultValue="Fitness">Fitness</option>
-              <option value="Groceries">Groceries</option>
-              <option value="Recipes">Recipes</option>
-              <option value="Mental Health">Mental Health</option>
-              <option value="Resources">Resources</option>
-              <option value="Misc">Misc.</option>
-            </Form.Control>
-          </Form.Group>
+          <CategorySelect
+            selectcategory={props.selectcategory}
+            handleinputchange={props.handleinputchange}
+          />
 
           <Form.Group controlId="textBlock">
             <Form.Control

@@ -27,7 +27,7 @@ class PostCardList extends Component {
       this.setState({ posts: response.data });
     });
   }
-
+  //component did update get posts of type category (useEffect if this wasn't a class) prop drilled from userhome
   PostCardList() {
     return this.state.posts.map((currentpost) => {
       return (

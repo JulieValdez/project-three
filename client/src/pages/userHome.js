@@ -5,6 +5,13 @@ import SideNav from "../components/SideNav/sideNav";
 import PostCardList from "../components/PostCardList/postCardList";
 
 class userHome extends Component {
+  state = {
+    filterCategory: "",
+  };
+
+  handleFilterCategoryChange = (filterCategory) => {
+    this.setState({ filterCategory: filterCategory });
+  };
   render() {
     return (
       <div className="App">
@@ -13,7 +20,9 @@ class userHome extends Component {
         </div>
         <Wrapper />
 
-        <ResponsiveNav />
+        <ResponsiveNav
+          handleFilterCategoryChange={this.handleFilterCategoryChange}
+        />
 
         <div className="desktopSideNavContainer">
           <SideNav />
