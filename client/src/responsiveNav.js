@@ -47,7 +47,6 @@ class ResponsiveNav extends Component {
   };
 
   onSubmit = (e) => {
-    alert("hello");
     e.preventDefault();
 
     const post = {
