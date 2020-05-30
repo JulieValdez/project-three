@@ -11,7 +11,10 @@ class userProfile extends Component {
     return (
       <div className="App">
         <Wrapper />
-        <ResponsiveNav />
+        <div className="responsiveNav">
+          <ResponsiveNav />
+        </div>
+
         <div className="desktopSideNavContainer">
           <SideNav />
         </div>
