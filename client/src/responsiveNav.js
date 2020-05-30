@@ -71,6 +71,7 @@ class ResponsiveNav extends Component {
           handlemodalopen={this.handlemodalopen}
           modalopenstatus={this.state.modalopen}
           handlemodalclose={this.handlemodalclose}
+          handleFilterCategoryChange={this.props.handleFilterCategoryChange}
         />
         <SideDrawer show={this.state.sideDrawerOpen} />
         {backDrop}
