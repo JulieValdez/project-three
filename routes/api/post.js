@@ -14,12 +14,14 @@ router.post("/addpost", (req, res) => {
   const postTitle = req.body.postTitle;
   const selectCategory = req.body.selectCategory;
   const postBody = req.body.postBody;
+  const imageId = req.body.imageId;
 
   const newPost = new Post({
     // userName,
     postTitle,
     selectCategory,
     postBody,
+    imageId,
   });
 
   newPost

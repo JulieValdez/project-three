@@ -1,7 +1,8 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import request from "superagent";
 
 function PopUp(
   props,
@@ -15,6 +16,27 @@ function PopUp(
   }
 ) {
   // console.log(props.handleinputchange);
+  const [fileEl, setFileEl] = useState();
+  function onPhotoSelected(files) {
+    const cloudName = "dyqpxrjky";
+    const uploadPreset = "p8cjqach";
+    const url = `https://api.cloudinary.com/v1_1/${cloudName}/upload`;
+    const title = "post photo";
+    for (let file of files) {
+      request
+        .post(url)
+        .field("upload_preset", uploadPreset)
+        .field("file", file)
+        .field("multiple", true)
+        .field("tags", title ? `myphotoalbum,${title}` : "myphotoalbum")
+        .field("context", title ? `photo=${title}` : "")
+        .end((error, response) => {
+          console.log("response", response);
+          props.handleImageChange(response.body.secure_url);
+          console.log(props.handleImageChange, response.body.secure_url);
+        });
+    }
+  }
 
   return (
     <Modal
@@ -66,6 +88,12 @@ function PopUp(
               {postbody}
             </Form.Control>
           </Form.Group>
+
+          <input
+            type="file"
+            ref={(fileInputEl) => setFileEl(fileInputEl)}
+            onChange={() => onPhotoSelected(fileEl.files)}
+          />
         </Form>
       </Modal.Body>
       <Modal.Footer>

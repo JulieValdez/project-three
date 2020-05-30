@@ -5,6 +5,7 @@ import PopUp from "./popUp";
 function PopUpToggle({
   posttitle,
   handleinputchange,
+  handleImageChange,
   postbody,
   selectcategory,
   onSubmit,
@@ -27,6 +28,7 @@ function PopUpToggle({
         onHide={handlemodalclose}
         posttitle={posttitle}
         handleinputchange={handleinputchange}
+        handleImageChange={handleImageChange}
         postbody={postbody}
         onSubmit={onSubmit}
         selectcategory={selectcategory}

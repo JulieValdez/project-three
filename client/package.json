@@ -14,7 +14,8 @@
     "react-dom": "^16.6.3",
     "react-masonry-css": "^1.0.14",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "^2.1.1"
+    "react-scripts": "^2.1.1",
+    "superagent": "^5.2.2"
   },
   "scripts": {
     "start": "react-scripts start",
