@@ -32,6 +32,9 @@ const handleSignOut = () =>{
             <li>
               <button onClick={handleSignOut} a href="/">Log out</button>
             </li>
+            <li>
+              <a href="#"></a>
+            </li>
           </ul>
         </nav>
       </div>

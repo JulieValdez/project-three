@@ -22,6 +22,8 @@ class PostCardList extends Component {
 
   componentDidMount() {
     axios.get("/post").then((response) => {
+      // console.log(response.data[7].selectCategory);
+
       this.setState({ posts: response.data });
     });
   }

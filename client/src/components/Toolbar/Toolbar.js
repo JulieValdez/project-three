@@ -41,12 +41,12 @@ const toolbar = ({
           <li></li>
           <li></li>
           <li>
-            <Dropdown>
+            <Dropdown className="filter-dropdown">
               <Dropdown.Toggle variant="info" id="dropdown-basic">
                 Filter Posts by Category
               </Dropdown.Toggle>
 
-              <Dropdown.Menu style={{}}>
+              <Dropdown.Menu className="dropdown-menu">
                 <Dropdown.Item href="#/action-1" style={{ color: "#0a0404" }}>
                   Fitness
                 </Dropdown.Item>
