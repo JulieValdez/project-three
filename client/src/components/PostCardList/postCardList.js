@@ -29,17 +29,12 @@ class PostCardList extends Component {
   }
   //component did update get posts of type category (useEffect if this wasn't a class) prop drilled from userhome
   componentDidUpdate(prevProps, prevState) {
-    //if state changes, call the API
-    if (prevState.posts !== this.state.posts) {
-      console.log("posts state has changed.");
-      axios.get("/post").then((response) => {
-        for (let i = 0; i < response.data.length; i++) {
-          //grab the categories from the data to display
-          const chosenCategory = response.data[i].selectCategory;
-          console.log(chosenCategory);
-        }
+    //if category is different from previous
+    if (prevProps.filterCategory !== this.props.filterCategory) {
+      console.log("filterCat state has changed.");
 
-        // this.setState({posts: chosenCategory })
+      axios.get(`/post/${this.props.filterCategory}`).then((response) => {
+        this.setState({ posts: response.data });
       });
     }
   }

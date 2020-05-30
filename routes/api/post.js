@@ -7,6 +7,12 @@ router.get("/post", (req, res) => {
     .catch((err) => res.status(400).json("Error: " + err));
 });
 
+router.get("/post/:category", (req, res) => {
+  Post.find({ selectCategory: req.params.category })
+    .then((posts) => res.json(posts))
+    .catch((err) => res.status(400).json("Error: " + err));
+});
+
 router.post("/addpost", (req, res) => {
   console.log(req.body);
 
@@ -28,7 +34,7 @@ router.post("/addpost", (req, res) => {
     .catch((err) => res.status(400).json("Error: " + err));
 });
 
-router.get("/:id", (req, res) => {
+router.get("/post/:id", (req, res) => {
   Post.findById(req.params.id)
     .then((post) => res.json(post))
     .catch((err) => res.status(400).json("Error: " + err));

@@ -16,7 +16,7 @@ class userHome extends Component {
     return (
       <div className="App">
         <div className="postCardList">
-          <PostCardList />
+          <PostCardList filterCategory={this.state.filterCategory} />
         </div>
         <Wrapper />
 
