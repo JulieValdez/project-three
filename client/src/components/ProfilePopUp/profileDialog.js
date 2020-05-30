@@ -50,7 +50,8 @@ class ProfileDialog extends Component {
 		userhandle: '',
 		bio: '',
 		website: '',
-		interest: ''
+		interest: '',
+		userId: localStorage.getItem('userId')
 	};
 	handleOpen = () => {
 		this.setState({ open: true });
@@ -65,7 +66,7 @@ class ProfileDialog extends Component {
 		event.preventDefault();
 
 		const postprofile = {
-			userId: this.state.interest,
+			userId: localStorage.getItem('userId'),
 			userhandle: this.state.userhandle,
 			bio: this.state.bio,
 			website: this.state.website,
