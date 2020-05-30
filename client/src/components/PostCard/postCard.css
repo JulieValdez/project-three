@@ -12,13 +12,13 @@
 }
 
 .title {
-  font-size: 5px;
+  font-size: 3px;
   color: blue;
   width: 80%;
 }
 
 .post-img {
-  width: 250px;
+  max-width: auto;
   height: auto;
   border-radius: 8px;
 }
@@ -28,8 +28,8 @@
   /* min-height: 80%; */
   flex-wrap: wrap;
   justify-content: center;
-  padding-top: 10px;
-  padding-bottom: 50px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   margin-left: auto;
   width: 60%;
   margin: 0 auto;
