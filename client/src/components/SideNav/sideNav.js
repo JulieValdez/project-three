@@ -22,6 +22,9 @@ export function SideNav(props) {
             <li>
               <button onClick={() => app.auth().signOut()}>Log out</button>
             </li>
+            <li>
+              <a href="#"></a>
+            </li>
           </ul>
         </nav>
       </div>

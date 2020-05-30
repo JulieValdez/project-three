@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  background: purple;
+  background: royalblue;
   height: 56px;
 }
 
@@ -47,6 +47,12 @@
 
 .spacer {
   flex: 1;
+}
+
+.dropdown-menu {
+  position: absolute;
+  z-index: 5000 !important;
+  /* display: flex; */
 }
 
 @media (max-width: 768px) {

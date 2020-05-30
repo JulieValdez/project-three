@@ -15,7 +15,9 @@ class userProfile extends Component {
         <div className="desktopSideNavContainer">
           <SideNav />
         </div>
-        <ProfilePageCard />
+        <div className="profilePageCard">
+          <ProfilePageCard />
+        </div>
       </div>
     );
   }
