@@ -28,7 +28,9 @@ router.post("/addpost", (req, res) => {
     .catch((err) => res.status(400).json("Error: " + err));
 });
 
-router.get("/:id", (req, res) => {
+router.get("/post/:id", (req, res) => {
+  console.log(req);
+  
   Post.findById(req.params.id)
     .then((post) => res.json(post))
     .catch((err) => res.status(400).json("Error: " + err));
@@ -36,7 +38,7 @@ router.get("/:id", (req, res) => {
 
 router.post("/update/:id", (req, res) => {
   Post.findByIdAndUpdate(req.params.id).then((post) => {
-    post.username = req.body.userName;
+    // post.username = req.body.userName;
     post.postTitle = req.body.postTitle;
     post.selectCategory = req.body.selectCategory;
     post.postBody = req.body.postBody;
