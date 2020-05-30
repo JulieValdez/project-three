@@ -4,7 +4,7 @@
   width: auto;
 }
 .my-masonry-grid_column {
-  padding-left: 20px; /* gutter size */
+  padding-left: 10px; /* gutter size */
   background-clip: padding-box;
 }
 
