@@ -11,6 +11,7 @@ class ResponsiveNav extends Component {
     selectcategory: "",
     postbody: "",
     modalopen: false,
+    imageId: "",
   };
 
   drawerToggleClickHandler = () => {
@@ -31,6 +32,12 @@ class ResponsiveNav extends Component {
     });
   };
 
+  handleImageChange = (image) => {
+    this.setState({
+      imageId: image,
+    });
+  };
+
   handlemodalopen = (event) => {
     this.setState({ modalopen: true });
   };
@@ -47,6 +54,7 @@ class ResponsiveNav extends Component {
       postTitle: this.state.posttitle,
       selectCategory: this.state.selectcategory,
       postBody: this.state.postbody,
+      imageId: this.state.imageId,
     };
     axios.post("/addpost", post).then((res) => {
       // console.log(res.data);
@@ -66,6 +74,7 @@ class ResponsiveNav extends Component {
           drawerClickHandler={this.drawerToggleClickHandler}
           posttitle={this.state.posttitle}
           handleinputchange={this.handleinputchange}
+          handleImageChange={this.handleImageChange}
           postbody={this.state.postbody}
           onSubmit={this.onSubmit}
           selectcategory={this.selectcategory}

@@ -1,10 +1,18 @@
 const router = require("express").Router();
 let User = require("../../models/user");
 
-router.get("/", (req, res) => {
-  User.find()
+router.get("/userprofile/:id", (req, res) => {
+  console.log('worked');
+  const user= req.params.id;
+
+  console.log(user);
+  
+  //domain.com/userprofile?id=2
+  User.findOne({
+    userId: user
+  })
     .then((user) => res.json(user))
-    .catch((err) => res.status(400).json("error: " + err));
+    .catch((err) => res.status(400).json("Error: " + err));
 });
 
 router.post("/userprofile", (req, res) => {
