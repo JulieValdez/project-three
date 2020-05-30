@@ -9,15 +9,17 @@ router.get("/", (req, res) => {
 
 router.post("/userprofile", (req, res) => {
   console.log(req.body);
+  const userId = req.body.userId;
   const userhandle = req.body.userhandle;
   const bio = req.body.bio;
   const website = req.body.website;
-  const interest = req.body.interest;
+  const hobbies = req.body.hobbies;
   const newUser = new User({
+    userId,
     userhandle,
     bio,
     website,
-    interest
+    hobbies
   });
   newUser
     .save()

@@ -28,8 +28,8 @@ const styles = {
 	submitButton: {
 		position: 'relative',
 		float: 'right',
-        marginTop: 20,
-        marginBottom: 20
+		marginTop: 20,
+		marginBottom: 20
 	},
 	closeButton: {
 		position: 'absolute',
@@ -38,9 +38,9 @@ const styles = {
 	},
 	startButton: {
 		position: 'relative',
-        margin: '0 auto',
-        display:'block',
-        marginBottom: 20
+		margin: '0 auto',
+		display: 'block',
+		marginBottom: 20
 	}
 };
 
@@ -50,7 +50,8 @@ class ProfileDialog extends Component {
 		userhandle: '',
 		bio: '',
 		website: '',
-		interest: ''
+		interest: '',
+		userId: localStorage.getItem('userId')
 	};
 	handleOpen = () => {
 		this.setState({ open: true });
@@ -63,24 +64,28 @@ class ProfileDialog extends Component {
 	};
 	handleSubmit = (event) => {
 		event.preventDefault();
-		alert('hello');
 
 		const postprofile = {
+			userId: localStorage.getItem('userId'),
 			userhandle: this.state.userhandle,
 			bio: this.state.bio,
 			website: this.state.website,
-			interest: this.state.interest,
+
 			hobbies: this.state.hobbies
 		};
-		axios.post('/userprofile', postprofile).then((res) => {
-			console.log(res.data);
-		});
-    };
-    
- 
+		axios
+			.post('/userprofile', postprofile)
+			.then((res) => {
+				console.log(res.data);
+				this.setState({ open: false });
+			})
+			.catch((err) => {
+				console.error(err);
+			});
+	};
 
-	render() {  
-         const { classes } = this.props;
+	render() {
+		const { classes } = this.props;
 		return (
 			<Fragment>
 				<Button
