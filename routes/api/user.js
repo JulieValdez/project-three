@@ -12,12 +12,12 @@ router.post("/userprofile", (req, res) => {
   const userhandle = req.body.userhandle;
   const bio = req.body.bio;
   const website = req.body.website;
-  const interest = req.body.interest;
+  const hobbies = req.body.hobbies;
   const newUser = new User({
     userhandle,
     bio,
     website,
-    interest
+    hobbies
   });
   newUser
     .save()

@@ -1,9 +1,19 @@
-import React from "react";
+import React, {useContext} from "react";
 import "./sidenav.css";
 import ProfileCard from "../ProfileCard/profileCard";
 import app from "../../firebase";
+import { Redirect } from 'react-router';
 
 export function SideNav(props) {
+
+  //logging out user and clearing local storage
+const handleSignOut = () =>{
+  app.auth().signOut();
+  localStorage.clear();
+  //TODO: redirect logged out user to '/'
+  return <Redirect to="/" />
+}
+
   return (
     <div>
       <div className="sidebarWrapper" style={{}}>
@@ -20,7 +30,7 @@ export function SideNav(props) {
               <a href="/profile">Profile</a>
             </li>
             <li>
-              <button onClick={() => app.auth().signOut()}>Log out</button>
+              <button onClick={handleSignOut} a href="/">Log out</button>
             </li>
           </ul>
         </nav>

@@ -4,14 +4,19 @@ import './style.css';
 import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
 import registerGraphic from '../assets/registerGraphic.svg';
 import app from '../../firebase';
+import *as firebase from 'firebase/app';
 
 function RegisterationForm({ history }) {
 	const handleSignUp = useCallback(
 		async (event) => {
 			event.preventDefault();
 			const { email, password } = event.target.elements;
+			
 			try {
 				await app.auth().createUserWithEmailAndPassword(email.value, password.value);
+				if (firebase.auth().currentUser !== null) console.log(firebase.auth().currentUser.uid);
+				const userId = firebase.auth().currentUser.uid;
+				localStorage.setItem("userId",userId);
 				history.push('/userhome');
 			} catch (error) {
 				console.log(error);

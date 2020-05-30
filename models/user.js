@@ -5,7 +5,7 @@ const UserSchema = new Schema({
   userhandle: { type: String, ref: "User" },
   bio: { type: String, maxlength: 300 },
   website: { type: String },
-  interest: { type: String, maxlength: 300 },
+  hobbies: { type: String, maxlength: 300 },
 });
 
 const User = mongoose.model("User", UserSchema);
