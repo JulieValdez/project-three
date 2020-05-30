@@ -1,10 +1,10 @@
 const router = require("express").Router();
 let User = require("../../models/user");
 
-router.get("/", (req, res) => {
+router.get("/userprofile", (req, res) => {
   User.find()
     .then((user) => res.json(user))
-    .catch((err) => res.status(400).json("error: " + err));
+    .catch((err) => res.status(400).json("Error: " + err));
 });
 
 router.post("/userprofile", (req, res) => {

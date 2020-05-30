@@ -2,7 +2,8 @@ import React, {useContext} from "react";
 import "./sidenav.css";
 import ProfileCard from "../ProfileCard/profileCard";
 import app from "../../firebase";
-import { Redirect } from 'react-router';
+import { withRouter, Redirect } from 'react-router';
+import { AuthContext } from '../../Auth';
 
 export function SideNav(props) {
 
@@ -10,8 +11,7 @@ export function SideNav(props) {
 const handleSignOut = () =>{
   app.auth().signOut();
   localStorage.clear();
-  //TODO: redirect logged out user to '/'
-  return <Redirect to="/" />
+  window.location='/';
 }
 
   return (
@@ -30,7 +30,7 @@ const handleSignOut = () =>{
               <a href="/profile">Profile</a>
             </li>
             <li>
-              <button onClick={handleSignOut} a href="/">Log out</button>
+              <button onClick={handleSignOut}>Log out</button>
             </li>
           </ul>
         </nav>

@@ -5,9 +5,10 @@ import Figure from 'react-bootstrap/Figure';
 import { Row, Col, Container } from 'react-bootstrap';
 import ProfilePic from '../assets/profilepic.jpeg';
 import ProfileDialog from '../../components/ProfilePopUp/profileDialog';
+import UserProfile from '../../components/UserProfile/userProfile'
 
 const ProfilePageCard = (props) => {
-	console.log(props);
+	// console.log(props);
 
 	return (
 		<Card className="profilePageCard" style={{ width: '70%' }}>
@@ -18,6 +19,7 @@ const ProfilePageCard = (props) => {
 							<Row>
 								<Col>
 									<ProfileDialog />
+									<UserProfile />
 									<div className="userInfoContainer">
 										<div className="profilePicPlaceholder">
 											<Card.Img
