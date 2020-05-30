@@ -27,6 +27,7 @@ class PostCardList extends Component {
       this.setState({ posts: response.data });
     });
   }
+
   //component did update get posts of type category (useEffect if this wasn't a class) prop drilled from userhome
   componentDidUpdate(prevProps, prevState) {
     //if category is different from previous

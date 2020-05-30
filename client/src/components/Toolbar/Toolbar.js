@@ -44,26 +44,29 @@ const toolbar = ({
           <li>
             <Dropdown
               className="filter-dropdown"
-              handleFilterCategoryChange={handleFilterCategoryChange}
+              onSelect={handleFilterCategoryChange}
             >
               <Dropdown.Toggle variant="info" id="dropdown-basic">
                 Filter Posts by Category
               </Dropdown.Toggle>
 
               <Dropdown.Menu className="dropdown-menu">
-                <Dropdown.Item href="#/action-1" style={{ color: "#0a0404" }}>
+                <Dropdown.Item href="#Fitness" style={{ color: "#0a0404" }}>
                   Fitness
                 </Dropdown.Item>
-                <Dropdown.Item href="#/action-2" style={{ color: "#0a0404" }}>
+                <Dropdown.Item href="#Recipes" style={{ color: "#0a0404" }}>
                   Recipes
                 </Dropdown.Item>
-                <Dropdown.Item href="#/action-3" style={{ color: "#0a0404" }}>
+                <Dropdown.Item
+                  href="#Mental Health"
+                  style={{ color: "#0a0404" }}
+                >
                   Mental Health
                 </Dropdown.Item>
-                <Dropdown.Item href="#/action-4" style={{ color: "#0a0404" }}>
+                <Dropdown.Item href="#Resources" style={{ color: "#0a0404" }}>
                   Resources
                 </Dropdown.Item>
-                <Dropdown.Item href="#/action-5" style={{ color: "#0a0404" }}>
+                <Dropdown.Item href="#Misc" style={{ color: "#0a0404" }}>
                   Misc
                 </Dropdown.Item>
               </Dropdown.Menu>

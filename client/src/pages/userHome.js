@@ -10,7 +10,9 @@ class userHome extends Component {
   };
 
   handleFilterCategoryChange = (filterCategory) => {
-    this.setState({ filterCategory: filterCategory });
+    console.log(filterCategory);
+
+    this.setState({ filterCategory: filterCategory.substring(1) });
   };
   render() {
     return (
