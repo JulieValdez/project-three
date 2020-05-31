@@ -26,8 +26,7 @@ export function SideNav(props) {
               <a
                 style={{
                   textDecoration: "none",
-                  color: "lightseagreen",
-                  fontWeight: "bold",
+                  color: "lightblue",
                 }}
                 href="/"
               >
@@ -38,8 +37,7 @@ export function SideNav(props) {
               <a
                 style={{
                   textDecoration: "none",
-                  color: "lightseagreen",
-                  fontWeight: "bold",
+                  color: "lightblue",
                 }}
                 href="/profile"
               >
