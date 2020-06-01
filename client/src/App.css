@@ -6,26 +6,13 @@
     rgba(135, 206, 236, 1) 35%,
     rgba(214, 225, 243, 1) 100%
   );
-  min-height: 100vh;
-  display: flex;
-}
+  min-height: 500vh;
 
-@media (max-width: 768px) {
-  .desktopSideNavContainer {
-    display: none;
-  }
-  .responsiveNav {
-    display: inline-block;
-  }
-}
-@media (min-width: 769px) {
-  .responsiveNav {
-    display: none;
-  }
+  /* display: flex; */
 }
 
 .postCardList {
-  position: absolute;
+  position: inherit;
   right: 50px;
   padding-left: 300px;
   padding-top: 75px;
@@ -35,4 +22,26 @@
   position: absolute;
   margin-left: 15%;
   margin-top: 5%;
+}
+
+@media (max-width: 768px) {
+  /* .App {
+    height: fit-content;
+  } */
+  .desktopSideNavContainer {
+    display: none;
+  }
+  .responsiveNav {
+    display: inline-block;
+  }
+  .postCardList {
+    position: absolute;
+    padding-left: 50px;
+    right: 15px;
+  }
+}
+@media (min-width: 769px) {
+  .responsiveNav {
+    display: none;
+  }
 }

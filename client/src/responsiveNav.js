@@ -56,8 +56,9 @@ class ResponsiveNav extends Component {
       imageId: this.state.imageId,
     };
     axios.post("/addpost", post).then((res) => {
-      console.log(res.data);
+      // console.log(res.data);
       this.handlemodalclose();
+      window.location.reload();
     });
   };
 
@@ -79,6 +80,7 @@ class ResponsiveNav extends Component {
           handlemodalopen={this.handlemodalopen}
           modalopenstatus={this.state.modalopen}
           handlemodalclose={this.handlemodalclose}
+          handleFilterCategoryChange={this.props.handleFilterCategoryChange}
         />
         <SideDrawer show={this.state.sideDrawerOpen} />
         {backDrop}
