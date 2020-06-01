@@ -17,13 +17,13 @@ router.get("/userprofile/:id", (req, res) => {
 
 router.post("/userprofile", (req, res) => {
   console.log(req.body);
-  const userId = window.localStorage.getItem("userId");
+  // const userId = userId;
   const userhandle = req.body.userhandle;
   const bio = req.body.bio;
   const website = req.body.website;
   const hobbies = req.body.hobbies;
   const newUser = new User({
-    userId,
+    // userId,
     userhandle,
     bio,
     website,

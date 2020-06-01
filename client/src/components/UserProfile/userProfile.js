@@ -22,21 +22,18 @@ class UserProfile extends Component {
     // user = user.userId;
     // this.setState({ user: entireUsersLocalStorageObj });
 
-    axios
-      .get("/userprofile/:id")
-      .then((res) => {
-        console.log(res);
-        this.setState({ user: res.data });
-      })
-      .catch((err) => console.log(err));
+    //     axios
+    //       .get("/userprofile/:id")
+    //       .then((res) => {
+    //         console.log(res);
+    //         this.setState({ user: res.data });
+    //       })
+    //       .catch((err) => console.log(err));
   }
 
   render() {
     return (
       <Fragment>
-        <h1>
-          user ID: <strong>{this.user.userId}</strong>
-        </h1>
         <h2>
           username : <strong>{this.user.userhandle}</strong>
         </h2>
