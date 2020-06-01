@@ -2,14 +2,14 @@ const router = require("express").Router();
 let User = require("../../models/user");
 
 router.get("/userprofile/:id", (req, res) => {
-  console.log('worked');
-  const user= req.params.id;
+  console.log("worked");
+  const user = req.params.id;
 
   console.log(user);
-  
+
   //domain.com/userprofile?id=2
   User.findOne({
-    userId: user
+    userId: user,
   })
     .then((user) => res.json(user))
     .catch((err) => res.status(400).json("Error: " + err));
@@ -17,7 +17,7 @@ router.get("/userprofile/:id", (req, res) => {
 
 router.post("/userprofile", (req, res) => {
   console.log(req.body);
-  const userId = req.body.userId;
+  const userId = window.localStorage.getItem("userId");
   const userhandle = req.body.userhandle;
   const bio = req.body.bio;
   const website = req.body.website;
@@ -27,7 +27,7 @@ router.post("/userprofile", (req, res) => {
     userhandle,
     bio,
     website,
-    hobbies
+    hobbies,
   });
   newUser
     .save()
