@@ -96,3 +96,13 @@ ul ul a {
   padding-left: 30px !important;
   background: #6d7fcc;
 }
+
+#button {
+  border-radius: 90px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: 1px solid #4158f6;
+  background-color: #7386d4;
+  color: lightblue;
+  font-size: large;
+}
