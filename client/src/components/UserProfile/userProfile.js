@@ -9,6 +9,7 @@ class UserProfile extends Component {
       bio: "your bio",
       website: "your website",
       hobbies: "your hobbies",
+      imageId: "your profile image",
     },
   };
 
@@ -42,6 +43,8 @@ class UserProfile extends Component {
 
           <br></br>
           <div style={{ color: "#685380" }}>
+            <image src={this.state.user.imageId}></image>
+            <br></br>
             <h4>bio: {this.state.user.bio}</h4>
             <br></br>
             <h4>website: {this.state.user.website}</h4>

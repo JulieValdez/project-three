@@ -6,7 +6,7 @@ function PostCard(props, { postTitle, selectCategory, postBody, imageId }) {
   const imageUrl = props.post.imageId;
   console.log(imageUrl);
   const stringParts = imageUrl.split("upload/");
-  stringParts.splice(1, 0, "upload/w_300,c_scale/");
+  stringParts.splice(1, 0, "upload/w_200,c_scale/");
   const sizedImageUrl = stringParts.join("");
   console.log(sizedImageUrl);
 
