@@ -82,6 +82,7 @@ class ProfileDialog extends Component {
       .catch((err) => {
         console.error(err);
       });
+    window.location.reload();
   };
 
   render() {

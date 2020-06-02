@@ -14,7 +14,7 @@ class UserProfile extends Component {
 
   componentDidMount() {
     const user = window.localStorage.getItem("userId"); //grabs the userId, string of letters and numbers
-    console.log(user);
+    // console.log(user);
 
     axios
       .get("/userprofile/" + user)
@@ -35,14 +35,20 @@ class UserProfile extends Component {
         {/* <h1>
           user ID: <strong>{this.state.user.userId}</strong>
         </h1> */}
-        <h2>username:</h2>
-        <h6>{this.state.user.userhandle}</h6>
         <br></br>
-        <h2>bio : {this.state.user.bio}</h2>
         <br></br>
-        <h2>website: {this.state.user.website}</h2>
-        <br></br>
-        <h2>hobbies: {this.state.user.hobbies}</h2>
+        <div style={{ textAlign: "center" }}>
+          <h1 style={{ color: "blueviolet" }}>{this.state.user.userhandle}</h1>
+
+          <br></br>
+          <div style={{ color: "#685380" }}>
+            <h4>bio: {this.state.user.bio}</h4>
+            <br></br>
+            <h4>website: {this.state.user.website}</h4>
+            <br></br>
+            <h4>hobbies: {this.state.user.hobbies}</h4>
+          </div>
+        </div>
       </Fragment>
     );
   }
