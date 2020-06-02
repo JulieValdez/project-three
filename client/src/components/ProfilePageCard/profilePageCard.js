@@ -1,26 +1,26 @@
-import React from 'react';
-import './profilePageCard.css';
-import Card from 'react-bootstrap/Card';
-import Figure from 'react-bootstrap/Figure';
-import { Row, Col, Container } from 'react-bootstrap';
-import ProfilePic from '../assets/profilepic.jpeg';
-import ProfileDialog from '../../components/ProfilePopUp/profileDialog';
-import UserProfile from '../../components/UserProfile/userProfile'
+import React from "react";
+import "./profilePageCard.css";
+import Card from "react-bootstrap/Card";
+import Figure from "react-bootstrap/Figure";
+import { Row, Col, Container } from "react-bootstrap";
+import ProfilePic from "../assets/profilepic.jpeg";
+import ProfileDialog from "../../components/ProfilePopUp/profileDialog";
+import UserProfile from "../../components/UserProfile/userProfile";
 
 const ProfilePageCard = (props) => {
-	// console.log(props);
+  // console.log(props);
 
-	return (
-		<Card className="profilePageCard" style={{ width: '70%' }}>
-			<div className="profilePageCardBody">
-				<Card.Body>
-					<Figure>
-						<Container>
-							<Row>
-								<Col>
-									<ProfileDialog />
-									<UserProfile />
-									<div className="userInfoContainer">
+  return (
+    <Card className="profilePageCard" style={{ width: "100%" }}>
+      <div className="profilePageCardBody">
+        <Card.Body>
+          <Figure>
+            <Container>
+              <Row>
+                <Col>
+                  <ProfileDialog />
+                  <UserProfile />
+                  {/* <div className="userInfoContainer">
 										<div className="profilePicPlaceholder">
 											<Card.Img
 												className="center"
@@ -49,15 +49,15 @@ const ProfilePageCard = (props) => {
 											egestas congue quisque egestas diam in arcu cursus. Risus ultricies
 											tristique nulla aliquet enim tortor at auctor urna.
 										</p>
-									</div>
-								</Col>
-							</Row>
-						</Container>
-					</Figure>
-				</Card.Body>
-			</div>
-		</Card>
-	);
+									</div> */}
+                </Col>
+              </Row>
+            </Container>
+          </Figure>
+        </Card.Body>
+      </div>
+    </Card>
+  );
 };
 
 export default ProfilePageCard;
