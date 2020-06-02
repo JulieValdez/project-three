@@ -54,7 +54,7 @@ class PostCardList extends Component {
 
   render() {
     return (
-      <div className="post-card-list">
+      <div className="post-card-list" style={{ marginLeft: "20px" }}>
         <Masonry
           breakpointCols={breakpointColumnsObj}
           className="my-masonry-grid"
