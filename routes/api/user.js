@@ -22,12 +22,14 @@ router.post("/userprofile", (req, res) => {
   const bio = req.body.bio;
   const website = req.body.website;
   const hobbies = req.body.hobbies;
+  const imageId = req.body.imageId;
   const newUser = new User({
     // userId,
     userhandle,
     bio,
     website,
     hobbies,
+    imageId,
   });
   newUser
     .save()

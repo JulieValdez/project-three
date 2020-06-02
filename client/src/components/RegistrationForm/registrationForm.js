@@ -8,6 +8,8 @@ import {
   Form,
   FormControl,
   Button,
+  Row,
+  Col,
 } from "react-bootstrap";
 import registerGraphic from "../assets/registerGraphic.svg";
 import app from "../../firebase";
@@ -27,8 +29,6 @@ function RegisterationForm({ history }) {
           console.log(firebase.auth().currentUser.uid);
         const userId = firebase.auth().currentUser.uid;
         localStorage.setItem("userId", userId);
-        console.log(userId);
-
         history.push("/userhome");
       } catch (error) {
         console.log(error);
@@ -39,20 +39,31 @@ function RegisterationForm({ history }) {
 
   return (
     <div className="container-fluid">
-      <div className="register">
-        <div class="col-sm-12">
+      <div className="register" style={{ width: "60%" }}>
+        <div className="col-sm-12">
           <img className="register-graphic" src={registerGraphic} />
           <Form onSubmit={handleSignUp}>
-            <label>
-              Email <br></br>
-              <input name="email" type="email" placeholder="Email" />
-            </label>
-            <br></br>
-            <label>
-              Password
+            <Row>
+              <Col>
+                <label>
+                  Email <br></br>
+                  <input name="email" type="email" placeholder="Email" />
+                </label>
+              </Col>
               <br></br>
-              <input name="password" type="password" placeholder="Password" />
-            </label>
+              <Col>
+                <label>
+                  Password
+                  <br></br>
+                  <input
+                    name="password"
+                    type="password"
+                    placeholder="Password"
+                  />
+                </label>
+              </Col>
+            </Row>
+
             <button id="register-button" variant="info" type="submit">
               Register
             </button>

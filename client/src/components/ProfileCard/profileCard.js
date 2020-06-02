@@ -11,7 +11,13 @@ function ProfileCard(props) {
         className="profileCard"
         style={{ width: "18rem", backgroundColor: "none" }}
       >
-        <Card.Img className="center" id="logo" variant="top" src={Logo} />
+        <Card.Img
+          className="center"
+          id="logo"
+          variant="top"
+          src={Logo}
+          style={{ marginBottom: "10px" }}
+        />
         <Card.Img
           className="center"
           id="profilePic"
@@ -20,10 +26,12 @@ function ProfileCard(props) {
         />
 
         <Card.Body>
-          <Card.Title>User Name Here</Card.Title>
-          <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
+          <Card.Title style={{ color: "lightskyblue", textAlign: "center" }}>
+            User Handle
+          </Card.Title>
+          <Card.Text style={{ marginLeft: "20px" }}>
+            User Bio Text Here: Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit
           </Card.Text>
         </Card.Body>
       </div>

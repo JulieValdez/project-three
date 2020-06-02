@@ -5,47 +5,53 @@ class UserProfile extends Component {
   state = {
     user: {
       userId: "",
-      userhandle: "",
-      website: "",
-      bio: "",
-      hobbies: "",
+      userhandle: "your unique id",
+      bio: "your bio",
+      website: "your website",
+      hobbies: "your hobbies",
+      imageId: "your profile image",
     },
   };
 
   componentDidMount() {
-    fetch(window.localStorage.getItem("userId"))
-      .then((res) => res.json())
-      .then((userId) => {
-        this.setState({ user: userId });
-        console.log(userId);
-      });
-    // user = user.userId;
-    // this.setState({ user: entireUsersLocalStorageObj });
+    const user = window.localStorage.getItem("userId"); //grabs the userId, string of letters and numbers
+    // console.log(user);
 
-    //     axios
-    //       .get("/userprofile/:id")
-    //       .then((res) => {
-    //         console.log(res);
-    //         this.setState({ user: res.data });
-    //       })
-    //       .catch((err) => console.log(err));
+    axios
+      .get("/userprofile/" + user)
+      .then((res) => {
+        console.log(res);
+        if (res.data == null) {
+          console.log("ok!");
+        } else {
+          this.setState({ user: res.data });
+        }
+      })
+      .catch((err) => console.log(err));
   }
 
   render() {
     return (
       <Fragment>
-        <h2>
-          username : <strong>{this.user.userhandle}</strong>
-        </h2>
-        <h2>
-          bio : <strong>{this.user.bio}</strong>
-        </h2>
-        <h2>
-          website: <strong>{this.user.website}</strong>
-        </h2>
-        <h2>
-          hobbies: <strong>{this.user.hobbies}</strong>
-        </h2>
+        {/* <h1>
+          user ID: <strong>{this.state.user.userId}</strong>
+        </h1> */}
+        <br></br>
+        <br></br>
+        <div style={{ textAlign: "center" }}>
+          <h1 style={{ color: "blueviolet" }}>{this.state.user.userhandle}</h1>
+
+          <br></br>
+          <div style={{ color: "#685380" }}>
+            <image src={this.state.user.imageId}></image>
+            <br></br>
+            <h4>bio: {this.state.user.bio}</h4>
+            <br></br>
+            <h4>website: {this.state.user.website}</h4>
+            <br></br>
+            <h4>hobbies: {this.state.user.hobbies}</h4>
+          </div>
+        </div>
       </Fragment>
     );
   }
