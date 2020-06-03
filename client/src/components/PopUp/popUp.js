@@ -8,8 +8,8 @@ import request from "superagent";
 function PopUp(props, { posttitle, postbody }) {
   const [fileEl, setFileEl] = useState();
   function onPhotoSelected(files) {
-    const cloudName = "df4dz8nol";
-    const uploadPreset = "vy3yda4c";
+    const cloudName = "dyqpxrjky";
+    const uploadPreset = "p8cjqach";
     const url = `https://api.cloudinary.com/v1_1/${cloudName}/upload`;
     const title = "post photo";
     for (let file of files) {
