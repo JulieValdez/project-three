@@ -11,7 +11,7 @@ import "./style.css";
 
 function TopNav(props) {
   return (
-    <div>
+    <div style={{ marginBottom: "20px" }}>
       <div className="navbar">
         <div className="row">
           <div className="col-md-12">
