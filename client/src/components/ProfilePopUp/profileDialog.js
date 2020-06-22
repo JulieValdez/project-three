@@ -1,7 +1,7 @@
-import React, { Component, Fragment, useState } from "react";
+import React, { Component, Fragment } from "react";
 import axios from "axios";
 import request from "superagent";
-import PropTypes from "prop-types";
+
 //Material UI
 import withStyles from "@material-ui/core/styles/withStyles";
 import Button from "@material-ui/core/Button";
@@ -56,7 +56,6 @@ class ProfileDialog extends Component {
     userId: localStorage.getItem("userId"),
   };
 
-  // const [fileEl, setFileEl] = useState() => {
   onPhotoSelected = (files) => {
     const cloudName = "df4dz8nol";
     const uploadPreset = "vy3yda4c";
@@ -72,16 +71,11 @@ class ProfileDialog extends Component {
         .field("context", title ? `photo=${title}` : "")
         .end((error, response) => {
           console.log("response", response);
+          this.setState({ imageId: response.body.secure_url });
           // handleImageChange(response.body.secure_url);
           // console.log(handleImageChange, response.body.secure_url);
         });
     }
-  };
-
-  handleImageChange = (image) => {
-    this.setState({
-      imageId: image,
-    });
   };
 
   handleOpen = () => {
@@ -90,19 +84,17 @@ class ProfileDialog extends Component {
   handleClose = () => {
     this.setState({ open: false });
   };
-  handleChange = (event) => {
-    this.setState({ [event.target.name]: event.target.value });
-  };
+
   handleSubmit = (event) => {
     event.preventDefault();
 
     const postprofile = {
-      userId: localStorage.getItem("userId"),
+      userId: this.state.userId,
       userhandle: this.state.userhandle,
       bio: this.state.bio,
       website: this.state.website,
       hobbies: this.state.hobbies,
-      imageId: this.state.fileInputEl,
+      imageId: this.state.imageId,
     };
     axios
       .post("/userprofile", postprofile)
@@ -113,10 +105,12 @@ class ProfileDialog extends Component {
       .catch((err) => {
         console.error(err);
       });
-    window.location.reload();
+    // window.location.reload();
   };
 
   render() {
+    console.log(this.props);
+
     const { classes } = this.props;
     return (
       <Fragment>
@@ -148,13 +142,14 @@ class ProfileDialog extends Component {
             <form onSubmit={this.handleSubmit}>
               <TextField
                 name="userhandle"
+                value={this.props.user.userhandle}
                 type="text"
                 label="userhandle"
                 multiline
                 rows="3"
                 placeholder="What is your username?"
                 className="textField"
-                onChange={this.handleChange}
+                onChange={this.props.changeUserState}
                 fullWidth
               />
               <TextField
@@ -203,7 +198,6 @@ class ProfileDialog extends Component {
                 variant="contained"
                 color="primary"
                 className={classes.submitButton}
-                onSubmit={this.handleImageChange}
               >
                 Submit
               </Button>
