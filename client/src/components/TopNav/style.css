@@ -1,28 +1,28 @@
 .top-nav {
-	width: 100%;
-	position: fixed;
-
-	top: 0;
+  width: 100%;
+  position: fixed;
+  margin-bottom: 10px;
+  top: 0;
 }
 
 #top-nav-buttons {
-	border-radius: 90px;
-	margin-left: 10px;
-	margin-right: 10px;
-	border: 1px solid #4158f6;
-	color: #4158f6;
+  border-radius: 90px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: 1px solid #4158f6;
+  color: #4158f6;
 }
 
 .info {
-	position: relative;
-	margin-top: 20px;
-	/* height: 100%; */
-	display: flex;
-	align-items: center;
-	justify-content: center;
+  position: relative;
+  margin-top: 20px;
+  /* height: 100%; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 h1 {
-	line-height: 80%;
-	color: #4056f7;
+  line-height: 80%;
+  color: #4056f7;
 }

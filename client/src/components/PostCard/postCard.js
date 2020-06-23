@@ -12,9 +12,14 @@ function PostCard(props, { postTitle, selectCategory, postBody, imageId }) {
 
   return (
     <div className="container">
-      <div className="post-card" style={{}}>
+      <div className="post-card">
         <Card.Body>
-          <Card.Title className="title">{props.post.postTitle}</Card.Title>
+          <Card.Title
+            style={{ fontSize: "20px", color: "blue", width: "80%" }}
+            className="title"
+          >
+            {props.post.postTitle}
+          </Card.Title>
           <Card.Img className="post-img" src={sizedImageUrl} />
           <Card.Text>{props.post.selectCategory}</Card.Text>
           <Card.Text>{props.post.postBody}</Card.Text>

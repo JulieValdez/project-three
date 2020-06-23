@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { Card } from "react-bootstrap";
-import { Link } from "react-router-dom";
+
 import Masonry from "react-masonry-css";
 import axios from "axios";
 import PostCard from "../PostCard/postCard";

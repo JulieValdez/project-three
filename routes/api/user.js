@@ -17,24 +17,43 @@ router.get("/userprofile/:id", (req, res) => {
 
 router.post("/userprofile", (req, res) => {
   console.log(req.body);
-  // const userId = userId;
+  const userId = req.body.userId;
   const userhandle = req.body.userhandle;
   const bio = req.body.bio;
   const website = req.body.website;
   const hobbies = req.body.hobbies;
   const imageId = req.body.imageId;
-  const newUser = new User({
-    // userId,
-    userhandle,
-    bio,
-    website,
-    hobbies,
-    imageId,
-  });
-  newUser
-    .save()
-    .then(() => res.json("User Profile added"))
+  User.findOne({
+    userId,
+  })
+    .then((user) => {
+      if (!user) {
+        const newUser = new User({
+          userId,
+          userhandle,
+          bio,
+          website,
+          hobbies,
+          imageId,
+        });
+        newUser
+          .save()
+          .then(() => res.send(user))
+          .catch((err) => res.status(400).json("Error: " + err));
+      } else {
+        user.bio = bio;
+        user.userhandle = userhandle;
+        user.website = website;
+        user.hobbies = hobbies;
+        user.imageId = imageId;
+        user.save((err) => {
+          res.send(user);
+        });
+      }
+    })
     .catch((err) => res.status(400).json("Error: " + err));
 });
+
+//need to add a put route for updating users profile
 
 module.exports = router;
