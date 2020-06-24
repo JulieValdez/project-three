@@ -54,6 +54,4 @@ router.post("/userprofile", (req, res) => {
     .catch((err) => res.status(400).json("Error: " + err));
 });
 
-//need to add a put route for updating users profile
-
 module.exports = router;
