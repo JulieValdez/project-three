@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import TopNav from "../components/TopNav/topNav";
-import RegisterationForm from "../components/RegistrationForm/registrationForm";
+import RegistrationForm from "../components/RegistrationForm/registrationForm";
 
 class userRegister extends Component {
   render() {
@@ -9,7 +9,7 @@ class userRegister extends Component {
       <div className="App">
         <div className="fullpage">
           <TopNav />
-          <RegisterationForm />
+          <RegistrationForm />
         </div>
       </div>
     );

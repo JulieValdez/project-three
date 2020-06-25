@@ -38,8 +38,8 @@ function RegisterationForm({ history }) {
   );
 
   return (
-    <div className="container-fluid">
-      <div className="register" style={{ width: "60%" }}>
+    <div className="container-fluid" style={{ width: "100%" }}>
+      <div className="register">
         <div className="col-sm-12">
           <img className="register-graphic" src={registerGraphic} />
           <Form onSubmit={handleSignUp}>
