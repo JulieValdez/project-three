@@ -6,8 +6,6 @@ import ProfilePageCard from "../components/ProfilePageCard/profilePageCard";
 
 class userProfile extends Component {
   render(props) {
-    // console.log(props);
-
     return (
       <div className="App">
         <Wrapper />

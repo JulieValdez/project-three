@@ -21,9 +21,7 @@ function PopUp(props, { posttitle, postbody }) {
         .field("tags", title ? `myphotoalbum,${title}` : "myphotoalbum")
         .field("context", title ? `photo=${title}` : "")
         .end((error, response) => {
-          console.log("response", response);
           props.handleImageChange(response.body.secure_url);
-          console.log(props.handleImageChange, response.body.secure_url);
         });
     }
   }

@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-
-import Wrapper from "../components/Wrapper/wrapper";
 import TopNav from "../components/TopNav/topNav";
 import PostCardList from "../components/PostCardList/postCardList";
 import SignIn from "../components/SignIn/signIn";

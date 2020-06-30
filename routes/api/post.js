@@ -14,16 +14,12 @@ router.get("/post/:category", (req, res) => {
 });
 
 router.post("/addpost", (req, res) => {
-  console.log(req.body);
-
-  // const userName = req.body.username;
   const postTitle = req.body.postTitle;
   const selectCategory = req.body.selectCategory;
   const postBody = req.body.postBody;
   const imageId = req.body.imageId;
 
   const newPost = new Post({
-    // userName,
     postTitle,
     selectCategory,
     postBody,
@@ -46,7 +42,6 @@ router.get("/post/:id", (req, res) => {
 
 router.post("/update/:id", (req, res) => {
   Post.findByIdAndUpdate(req.params.id).then((post) => {
-    // post.username = req.body.userName;
     post.postTitle = req.body.postTitle;
     post.selectCategory = req.body.selectCategory;
     post.postBody = req.body.postBody;

@@ -1,16 +1,7 @@
 import React, { useCallback } from "react";
 import { withRouter } from "react-router";
 import "./style.css";
-import {
-  Navbar,
-  Nav,
-  NavDropdown,
-  Form,
-  FormControl,
-  Button,
-  Row,
-  Col,
-} from "react-bootstrap";
+import { Form, Button, Row, Col } from "react-bootstrap";
 import registerGraphic from "../assets/registerGraphic.svg";
 import app from "../../firebase";
 import * as firebase from "firebase/app";

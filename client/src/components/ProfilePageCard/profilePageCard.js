@@ -6,8 +6,6 @@ import { Row, Col, Container } from "react-bootstrap";
 import UserProfile from "../ProfileforUser/profileForUser";
 
 const ProfilePageCard = (props) => {
-  // console.log(props);
-
   return (
     <Card className="profilePageCard" style={{ width: "70%" }}>
       <div className="profilePageCardBody">

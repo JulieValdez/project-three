@@ -2,8 +2,6 @@ import React from "react";
 import Form from "react-bootstrap/Form";
 
 function CategorySelect(props) {
-  //   console.log(props);
-
   return (
     <Form.Group controlId="categorySelect">
       <Form.Label>Choose a Category</Form.Label>

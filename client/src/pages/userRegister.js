@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-
 import TopNav from "../components/TopNav/topNav";
 import RegistrationForm from "../components/RegistrationForm/registrationForm";
 

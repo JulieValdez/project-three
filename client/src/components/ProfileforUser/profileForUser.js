@@ -19,14 +19,10 @@ class UserProfile extends Component {
   };
 
   componentDidMount() {
-    // console.log("hi");
-
     axios
       .get("/userprofile/" + this.state.user.userId)
       .then((res) => {
-        console.log("res", res);
         if (res.data == null) {
-          console.log("data is null!");
         } else {
           this.setState({ user: res.data });
         }
@@ -49,20 +45,15 @@ class UserProfile extends Component {
       hobbies: this.state.user.hobbies,
       imageId: this.state.user.imageId,
     };
-    console.log("postprofile", postprofile);
 
     axios
       .post("/userprofile", postprofile)
       .then((res) => {
-        console.log("data sent to db");
-
-        console.log(res.data);
         this.setState({ open: false });
       })
       .catch((err) => {
         console.error(err);
       });
-    // window.location.reload();
   };
 
   onPhotoSelected = (files) => {
@@ -82,7 +73,6 @@ class UserProfile extends Component {
         .field("tags", title ? `myphotoalbum,${title}` : "myphotoalbum")
         .field("context", title ? `photo=${title}` : "")
         .end((error, response) => {
-          console.log("response", response);
           this.setState({
             APIrequest: false,
             user: { ...this.state.user, imageId: response.body.secure_url },

@@ -56,7 +56,6 @@ class ResponsiveNav extends Component {
       imageId: this.state.imageId,
     };
     axios.post("/addpost", post).then((res) => {
-      // console.log(res.data);
       this.handlemodalclose();
       window.location.reload();
     });
