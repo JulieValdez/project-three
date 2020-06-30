@@ -2,12 +2,8 @@ const router = require("express").Router();
 let User = require("../../models/user");
 
 router.get("/userprofile/:id", (req, res) => {
-  console.log("worked");
   const user = req.params.id;
 
-  console.log(user);
-
-  //domain.com/userprofile?id=2
   User.findOne({
     userId: user,
   })
@@ -16,7 +12,6 @@ router.get("/userprofile/:id", (req, res) => {
 });
 
 router.post("/userprofile", (req, res) => {
-  console.log(req.body);
   const userId = req.body.userId;
   const userhandle = req.body.userhandle;
   const bio = req.body.bio;

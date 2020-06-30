@@ -2,12 +2,10 @@ import React, { useContext } from "react";
 import "./sidenav.css";
 import ProfileCard from "../ProfileCard/profileCard";
 import app from "../../firebase";
-import { withRouter, Redirect } from "react-router";
-import { AuthContext } from "../../Auth";
+
 import Button from "react-bootstrap/Button";
 
 export function SideNav(props) {
-  //logging out user and clearing local storage
   const handleSignOut = () => {
     app.auth().signOut();
     localStorage.clear();
@@ -49,9 +47,6 @@ export function SideNav(props) {
               <Button id="button" onClick={handleSignOut}>
                 Log Out
               </Button>
-              {/* <button id="button" onClick={handleSignOut}>
-                Log out
-              </button> */}
             </li>
             <li>
               <a href="#"></a>
