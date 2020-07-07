@@ -4,8 +4,8 @@ Full-Stack MERN app that is similar to a Facebook or Nextdoor, but specific to w
 
 ![Screen Shot 2020-06-07 at 1 07 32 PM](https://user-images.githubusercontent.com/30880308/83979100-bc073e80-a8c0-11ea-9560-d7ffea56a955.png)
 
-This was a collaborative project made by myself, Julie Valdez, Megan Cho, Jin Kim... the original repo can be found here:
-Since the project, I have refined some of the CSS and plan to continue functionality.
+This was a collaborative project made by Emily Marinaro, Julie Valdez, Megan Cho, and Jin Kim.
+Since the project, we have refined some of the CSS and plan to continue functionality.
 
 Tech Used:
 HTML,CSS
